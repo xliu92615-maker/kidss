@@ -9,6 +9,8 @@ import travel6Image from './assets/images/regenerated_image_1782471206148.jpg';
 import travel11Image from './assets/images/regenerated_image_1782471567611.jpg';
 // @ts-expect-error - Vite handles jpg asset resolution dynamically
 import bakingImage from './assets/images/regenerated_image_1784378399919.jpg';
+// @ts-expect-error - Vite handles jpg asset resolution dynamically
+import vetImage from './assets/images/regenerated_image_1784379342558.jpg';
 
 export const ACTIVITIES: Activity[] = [
   // Category: career (小小職業體驗營)
@@ -101,33 +103,32 @@ export const ACTIVITIES: Activity[] = [
   },
   {
     id: 'career-4',
-    title: '愛心小小獸醫體驗營：動物醫院一日守護天使',
+    title: '救援小英雄波力見面會',
     category: 'career',
-    shortDesc: '穿上白袍與聽診器！學習照顧小貓小狗、包紮傷口與聽心跳！',
-    description: '每一個喜愛動物的孩子，心中都有一個守護小生命的夢想。換上客製化小小獸醫專屬白袍，掛上真實聽診器。在專業執業獸醫師的帶領下，認識貓狗的骨骼構造與日常照護知識；學習如何幫毛孩量體溫、聽心跳，並模擬進行基礎外科傷口包紮與X光片判讀，培養極致的同理心與責任感。',
-    image: 'https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?auto=format&fit=crop&w=800&q=80',
-    age: '4 - 10 歲',
-    duration: '2 小時',
-    price: 'NT$850 (含小獸醫白袍、專屬聽診器、毛孩急救包教材、證書)',
-    location: '台北市 / 台中市 / 高雄市 合作動物醫院',
-    fullAddress: '台北市大安區 / 台中市西區 / 高雄市左營區（報名後提供詳細院所地址）',
-    date: '每週六、日 上午 10:00 / 下午 14:00',
-    spots: 10,
-    spotsLeft: 3,
+    shortDesc: '勇敢的救援小隊波力大集合！一起跳舞、學習交通安全知識，還有合照留念！',
+    description: '深受寶貝們喜愛的救援小英雄波力（Poli）來囉！跟著勇敢的波力隊長一起唱歌跳舞，學習最重要的交通安全常規。現場設有互動遊戲、有獎徵答，更有難得的親密擁抱與拍立得一對一合照環節，給孩子最威風、最有安全感的快樂回憶！',
+    image: vetImage,
+    age: '2 - 8 歲',
+    duration: '1.5 小時',
+    price: 'NT$299',
+    location: '各縣市皆有舉辦 請加Line詢問預約',
+    fullAddress: '各縣市皆有舉辦 請加Line詢問預約',
+    date: '場次眾多 請加LINE詢問預約報名',
+    spots: 20,
+    spotsLeft: 4,
     learningGoals: [
-      '認識常見寵物生理構造與健康警訊，培養愛護生命觀念',
-      '實際操作聽診器與基礎包紮，鍛鍊精細動作與臨床觀察力',
-      '建立責任感，理解飼養寵物是一輩子的重要承諾',
-      '克服對未知醫療儀器的恐懼，建立醫患同理心'
+      '透過生動活潑的交通安全短劇，加深寶貝的日常安全觀念',
+      '歡樂的歌舞律動，促進大肌肉發展與身體平衡協調',
+      '在互動遊戲中學習遵守秩序與團隊互助的合作精神',
+      '近距離接觸卡通偶像，增進自信與正向社交互動經驗'
     ],
     included: [
-      '小小獸醫專屬刺繡白袍體驗與拍照留念',
-      '雙面實聽聽診器組（可帶回家隨時練習）',
-      '模擬急救繃帶與小動物照護手冊教材',
-      '「愛心小小獸醫師」官方結業證書與證件套'
+      '波力限定版交通安全徽章與貼紙包一份',
+      '波力親密見面擁抱與單獨一對一合照拍立得一張',
+      '全場熱情互動交通安全劇場與律動體驗資格'
     ],
     isPopular: true,
-    tags: ['獸醫體驗', '愛護動物', '聽診器', '生命教育']
+    tags: ['波力見面會', '交通安全', '明星互動', '歌舞律動']
   },
   {
     id: 'career-5',
