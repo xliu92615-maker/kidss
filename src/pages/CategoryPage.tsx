@@ -3,7 +3,26 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ACTIVITIES } from '../data';
 import { Activity } from '../types';
 import ActivityCard from '../components/ActivityCard';
-import { ArrowLeft, Search, RefreshCw, Star, ShieldCheck, Award, Sparkles, Heart, Smile, Users, Compass } from 'lucide-react';
+import { ArrowLeft, Search, RefreshCw, Star, ShieldCheck, Award, Sparkles, Heart, Smile, Users, Compass, Globe, Plane, BookOpen, Camera, Eye, ChevronLeft, ChevronRight, X, Play, Pause, Maximize2 } from 'lucide-react';
+
+const studyGallery = [
+  { src: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80', title: '美國常春藤名校學術營' },
+  { src: 'https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80', title: '日本筑波宇宙太空探險' },
+  { src: 'https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=1200&q=80', title: '新加坡國立大學雙語思辨' },
+  { src: 'https://images.unsplash.com/photo-1513635269975-59663e0ca1ad?auto=format&fit=crop&w=1200&q=80', title: '古典英倫劍橋撐篙體驗' },
+  { src: 'https://images.unsplash.com/photo-1504618223053-559bdef9dd5a?auto=format&fit=crop&w=1200&q=80', title: '澳洲大自然與荒野求生' },
+  { src: 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1200&q=80', title: '美國矽谷科技與史丹佛探秘' },
+  { src: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1200&q=80', title: '團隊合作挑戰賽' },
+  { src: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1200&q=80', title: '歡樂戶外探索時光' },
+  { src: 'https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=1200&q=80', title: '大自然生態觀察' },
+  { src: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1200&q=80', title: '戶外尋寶與大地遊戲' },
+  { src: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1200&q=80', title: '五感彩繪與創意繪畫' },
+  { src: 'https://images.unsplash.com/photo-1510531704581-5b2870972060?auto=format&fit=crop&w=1200&q=80', title: '程式積木與機器人實作' },
+  { src: 'https://images.unsplash.com/photo-1530099486328-e021101a494a?auto=format&fit=crop&w=1200&q=80', title: '學員成果簡報發表會' },
+  { src: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80', title: '做中學、學中玩的趣味課堂' },
+  { src: 'https://images.unsplash.com/photo-1472289065668-ce650ac443d2?auto=format&fit=crop&w=1200&q=80', title: '科學顯微鏡探索' },
+  { src: 'https://images.unsplash.com/photo-1564121211835-e88c852648ab?auto=format&fit=crop&w=1200&q=80', title: '戶外趣味體能對抗' }
+];
 
 interface CategoryPageProps {
   favorites: Activity[];
@@ -17,11 +36,40 @@ export default function CategoryPage({ favorites, onFavoriteToggle }: CategoryPa
   const [searchQuery, setSearchQuery] = useState('');
   const [ageFilter, setAgeFilter] = useState<'all' | '3-6' | '7-10' | '10-plus'>('all');
   const [locationFilter, setLocationFilter] = useState<string>('all');
+  const [activePhotoIndex, setActivePhotoIndex] = useState<number | null>(null);
+  const [activeHeroIndex, setActiveHeroIndex] = useState(0);
+  const [isAutoplay, setIsAutoplay] = useState(true);
+
+  // Autoplay effect for the study gallery hero stage
+  useEffect(() => {
+    if (!isAutoplay || catId !== 'study' || activePhotoIndex !== null) return;
+    const interval = setInterval(() => {
+      setActiveHeroIndex((prev) => (prev + 1) % studyGallery.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [isAutoplay, catId, activePhotoIndex]);
 
   // Scroll to top on load
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
+    setActiveHeroIndex(0);
   }, [catId]);
+
+  // Lightbox keyboard navigation
+  useEffect(() => {
+    if (activePhotoIndex === null) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') {
+        setActivePhotoIndex((prev) => (prev !== null && prev > 0 ? prev - 1 : studyGallery.length - 1));
+      } else if (e.key === 'ArrowRight') {
+        setActivePhotoIndex((prev) => (prev !== null && prev < studyGallery.length - 1 ? prev + 1 : 0));
+      } else if (e.key === 'Escape') {
+        setActivePhotoIndex(null);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [activePhotoIndex]);
 
   // Helper age matcher
   const matchAge = (activityAge: string, filter: typeof ageFilter) => {
@@ -105,6 +153,321 @@ export default function CategoryPage({ favorites, onFavoriteToggle }: CategoryPa
   };
 
   const uniqueCities = ['台北', '新北', '桃園', '新竹', '台中', '宜蘭', '屏東'];
+
+  if (catId === 'study') {
+    const lineUrl = 'https://line.me/R/ti/p/@parentchildfun';
+    const activePhoto = studyGallery[activeHeroIndex];
+
+    const nextSlide = () => {
+      setActiveHeroIndex((prev) => (prev + 1) % studyGallery.length);
+    };
+
+    const prevSlide = () => {
+      setActiveHeroIndex((prev) => (prev - 1 + studyGallery.length) % studyGallery.length);
+    };
+
+    return (
+      <div className="min-h-screen bg-neutral-50/50 py-12">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+          {/* Header with Minimalist Back Button */}
+          <div className="flex flex-col gap-6">
+            <div>
+              <Link
+                to="/"
+                className="inline-flex items-center gap-2 text-neutral-500 hover:text-neutral-900 transition-colors text-sm font-semibold py-1.5 px-3 rounded-lg hover:bg-neutral-100 cursor-pointer"
+              >
+                <ArrowLeft className="w-4 h-4 text-brand-orange" />
+                返回首頁
+              </Link>
+            </div>
+
+            {/* Premium, Clean Title & Subtitle */}
+            <div className="text-center max-w-3xl mx-auto space-y-4">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-neutral-900 tracking-tight font-rounded">
+                啟夢教育｜國際留遊學
+              </h1>
+              <p className="text-base sm:text-lg md:text-xl text-brand-orange font-bold tracking-wide">
+                讓孩子勇敢追夢，讓世界成為孩子的教室
+              </p>
+              <div className="w-16 h-1 bg-brand-orange mx-auto rounded-full mt-3"></div>
+            </div>
+
+            {/* Elegant Preface Card */}
+            <div className="max-w-3xl mx-auto bg-white rounded-3xl border border-neutral-200/60 p-6 sm:p-8 shadow-sm space-y-4 text-left">
+              <p className="text-sm sm:text-base text-neutral-600 font-medium leading-relaxed">
+                我們期盼孩子勇敢逐夢，讓教育跨越國界，教育給孩子的是知識與能力；而國際視野帶來的是格局、眼界與更多人生機會。
+              </p>
+              <p className="text-sm sm:text-base text-neutral-600 font-medium leading-relaxed">
+                當知識結合國際經驗，當學習連結世界文化，孩子將擁有面對未來的自信與競爭力。
+              </p>
+              
+              <div className="border-l-4 border-brand-orange bg-brand-orange/5 p-4 sm:p-5 rounded-r-2xl mt-4 space-y-1.5">
+                <p className="text-xs sm:text-sm font-bold text-neutral-500 uppercase tracking-wider">
+                  這也是啟夢教育始終堅持的教育理念：
+                </p>
+                <p className="text-sm sm:text-base font-black text-neutral-800 font-rounded">
+                  「教育改變人生，國際視野成就未來。」
+                </p>
+              </div>
+            </div>
+
+            {/* Section Header for Gallery */}
+            <div className="text-center max-w-3xl mx-auto pt-6 space-y-2">
+              <h2 className="text-xl sm:text-2xl font-bold text-neutral-800 font-rounded">
+                歷年精彩活動回顧
+              </h2>
+              <p className="text-xs sm:text-sm text-neutral-500 font-medium">
+                每一張照片，都是孩子成長最珍貴的回憶。歡迎一起回顧啟夢教育歷年的精彩時刻。
+              </p>
+            </div>
+          </div>
+
+          {/* Interactive Hero Slider Stage */}
+          <div className="relative group max-w-4xl mx-auto bg-white rounded-3xl overflow-hidden border border-neutral-200/60 shadow-lg shadow-neutral-200/50">
+            {/* Main Active Image Display */}
+            <div 
+              className="relative w-full aspect-[16/10] sm:aspect-[16/9] bg-neutral-900 overflow-hidden cursor-pointer"
+              onClick={() => setActivePhotoIndex(activeHeroIndex)}
+            >
+              {/* Image with smooth transition effect on change */}
+              <img
+                key={activeHeroIndex}
+                src={activePhoto.src}
+                alt={activePhoto.title}
+                className="w-full h-full object-cover select-none animate-fade-in transition-transform duration-700 hover:scale-[1.02]"
+                referrerPolicy="no-referrer"
+              />
+
+              {/* Clean Top-Right Float HUD */}
+              <div className="absolute top-4 right-4 flex items-center gap-2 z-10">
+                <span className="text-xs font-mono font-bold bg-black/50 text-white px-2.5 py-1 rounded-full backdrop-blur-md border border-white/10 select-none">
+                  {activeHeroIndex + 1} / {studyGallery.length}
+                </span>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setActivePhotoIndex(activeHeroIndex);
+                  }}
+                  className="p-1.5 bg-black/50 hover:bg-black/70 hover:scale-105 active:scale-95 text-white rounded-full transition-all border border-white/10 cursor-pointer backdrop-blur-md"
+                  title="放大相片"
+                >
+                  <Maximize2 className="w-3.5 h-3.5" />
+                </button>
+              </div>
+
+              {/* Prev / Next Slide Arrows (always available for easy clicking) */}
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  prevSlide();
+                }}
+                className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-black/30 hover:bg-black/60 text-white rounded-full transition-all backdrop-blur-md border border-white/10 hover:scale-105 active:scale-95 cursor-pointer z-10"
+                aria-label="Previous Slide"
+              >
+                <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
+              </button>
+
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  nextSlide();
+                }}
+                className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-black/30 hover:bg-black/60 text-white rounded-full transition-all backdrop-blur-md border border-white/10 hover:scale-105 active:scale-95 cursor-pointer z-10"
+                aria-label="Next Slide"
+              >
+                <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
+              </button>
+            </div>
+
+            {/* Slider Control Bar (Play, Pause, Progress Dots) */}
+            <div className="px-6 py-4 bg-white border-t border-neutral-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <button
+                onClick={() => setIsAutoplay(!isAutoplay)}
+                className={`inline-flex items-center gap-2 text-xs font-bold px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
+                  isAutoplay 
+                    ? 'bg-neutral-100 text-neutral-800 hover:bg-neutral-200' 
+                    : 'bg-brand-orange/10 text-brand-orange hover:bg-brand-orange/20'
+                }`}
+              >
+                {isAutoplay ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
+                {isAutoplay ? '暫停自動輪播' : '開始自動輪播'}
+              </button>
+
+              {/* Progress Indicator Dots */}
+              <div className="flex items-center gap-1.5 overflow-x-auto max-w-full py-1 scrollbar-none justify-center">
+                {studyGallery.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setActiveHeroIndex(idx)}
+                    className={`h-2 rounded-full transition-all cursor-pointer ${
+                      idx === activeHeroIndex 
+                        ? 'w-6 bg-brand-orange' 
+                        : 'w-2 bg-neutral-200 hover:bg-neutral-300'
+                    }`}
+                    aria-label={`Go to slide ${idx + 1}`}
+                  />
+                ))}
+              </div>
+
+              {/* Autoplay Pulse indicator */}
+              <div className="flex items-center gap-1.5 text-xs text-neutral-400 font-medium">
+                {isAutoplay ? (
+                  <>
+                    <span className="relative flex h-2 w-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-orange opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-orange"></span>
+                    </span>
+                    輪播中
+                  </>
+                ) : (
+                  <span>已暫停</span>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* Scrolling Thumbnails Scroller strip */}
+          <div className="space-y-3 max-w-4xl mx-auto text-left">
+            <h4 className="text-xs font-black uppercase tracking-widest text-neutral-400 font-rounded">
+              快速切換精彩相簿 ({studyGallery.length} 張)
+            </h4>
+            
+            <div className="relative">
+              <div className="flex gap-3 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-neutral-200 scroll-smooth snap-x">
+                {studyGallery.map((photo, index) => {
+                  const isActive = index === activeHeroIndex;
+                  return (
+                    <button
+                      key={index}
+                      onClick={() => setActiveHeroIndex(index)}
+                      className={`relative flex-shrink-0 w-24 h-16 sm:w-28 sm:h-20 rounded-xl overflow-hidden snap-start transition-all duration-300 cursor-pointer ${
+                        isActive 
+                          ? 'ring-4 ring-brand-orange ring-offset-2 scale-95 shadow-md shadow-brand-orange/10' 
+                          : 'opacity-70 hover:opacity-100 hover:scale-105'
+                      }`}
+                    >
+                      <img
+                        src={photo.src}
+                        alt={photo.title}
+                        className="w-full h-full object-cover"
+                        referrerPolicy="no-referrer"
+                      />
+                      <div className="absolute inset-0 bg-black/10 hover:bg-transparent transition-colors" />
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+
+          {/* Clean Minimal LINE Consultation Bar */}
+          <div className="bg-white rounded-3xl border border-neutral-200/80 p-8 shadow-sm flex flex-col md:flex-row items-center gap-6 justify-between max-w-4xl mx-auto mt-12">
+            <div className="flex gap-4 items-center text-left">
+              <div className="w-12 h-12 rounded-2xl bg-neutral-100 flex items-center justify-center text-2xl shrink-0">
+                📷
+              </div>
+              <div className="space-y-1">
+                <h4 className="font-bold text-neutral-800 text-base sm:text-lg">期待孩子成為下一張精彩照片的主角嗎？</h4>
+                <p className="text-neutral-500 text-xs sm:text-sm font-medium">歡迎與啟夢教育官方 LINE 客服諮詢，為您提供專屬的一對一課程顧問諮詢！</p>
+              </div>
+            </div>
+            <a
+              href={lineUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 w-full md:w-auto px-6 py-3 rounded-full bg-line-green hover:bg-line-green-hover text-white text-sm font-bold text-center transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer shadow-sm hover:shadow active:scale-98"
+            >
+              💬 LINE 專人預約諮詢
+            </a>
+          </div>
+
+          {/* Lightbox Modal (Fully functional with Left/Right arrows, Image counter, Close button) */}
+          {activePhotoIndex !== null && (
+            <div
+              className="fixed inset-0 z-50 flex flex-col justify-between bg-neutral-950/98 backdrop-blur-md animate-fade-in text-white"
+              onClick={() => setActivePhotoIndex(null)}
+            >
+              {/* Lightbox Header Bar */}
+              <div 
+                className="flex items-center justify-between px-6 py-4 w-full bg-gradient-to-b from-black/60 to-transparent z-10" 
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="flex items-center gap-3 text-left">
+                  <span className="text-neutral-400 text-xs sm:text-sm font-medium tracking-widest font-mono">
+                    {activePhotoIndex + 1} / {studyGallery.length}
+                  </span>
+                  <span className="h-4 w-[1px] bg-neutral-800"></span>
+                  <span className="text-neutral-100 text-xs sm:text-sm font-semibold truncate max-w-[200px] sm:max-w-md">
+                    {studyGallery[activePhotoIndex].title}
+                  </span>
+                </div>
+                <button
+                  onClick={() => setActivePhotoIndex(null)}
+                  className="p-2 hover:bg-white/10 text-neutral-300 hover:text-white rounded-full transition-all cursor-pointer active:scale-90"
+                  aria-label="Close"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              {/* Center Area: Image & Nav Arrows */}
+              <div 
+                className="relative flex-1 flex items-center justify-center px-4 md:px-24" 
+                onClick={(e) => e.stopPropagation()}
+              >
+                {/* Prev Arrow */}
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setActivePhotoIndex((prev) => (prev !== null && prev > 0 ? prev - 1 : studyGallery.length - 1));
+                  }}
+                  className="absolute left-4 p-3 bg-white/5 hover:bg-white/15 hover:text-white text-neutral-300 rounded-full transition-all border border-white/10 hover:border-white/20 hover:scale-105 active:scale-95 cursor-pointer z-20"
+                  aria-label="Previous"
+                >
+                  <ChevronLeft className="w-6 h-6 sm:w-8 sm:h-8" />
+                </button>
+
+                {/* Large Image */}
+                <div className="relative max-w-full max-h-[72vh] flex items-center justify-center">
+                  <img
+                    src={studyGallery[activePhotoIndex].src}
+                    alt={studyGallery[activePhotoIndex].title}
+                    className="max-w-full max-h-[72vh] object-contain rounded-xl shadow-2xl animate-scale-up border border-neutral-800/50"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+
+                {/* Next Arrow */}
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setActivePhotoIndex((prev) => (prev !== null && prev < studyGallery.length - 1 ? prev + 1 : 0));
+                  }}
+                  className="absolute right-4 p-3 bg-white/5 hover:bg-white/15 hover:text-white text-neutral-300 rounded-full transition-all border border-white/10 hover:border-white/20 hover:scale-105 active:scale-95 cursor-pointer z-20"
+                  aria-label="Next"
+                >
+                  <ChevronRight className="w-6 h-6 sm:w-8 sm:h-8" />
+                </button>
+              </div>
+
+              {/* Lightbox Footer Bar */}
+              <div 
+                className="px-6 py-6 w-full text-center bg-gradient-to-t from-black/60 to-transparent z-10 space-y-1" 
+                onClick={(e) => e.stopPropagation()}
+              >
+                <p className="text-white text-sm sm:text-base md:text-lg font-bold tracking-wide">
+                  {studyGallery[activePhotoIndex].title}
+                </p>
+                <p className="text-neutral-400 text-xs">
+                  啟夢教育 ． 歷年精彩體驗活動足跡
+                </p>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
 
   if (catId === 'team') {
     const lineUrl = 'https://line.me/R/ti/p/@parentchildfun';
