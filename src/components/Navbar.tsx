@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 interface NavbarProps {
-  onCategoryChange: (category: 'all' | 'career' | 'subject' | 'colearning' | 'team' | 'study') => void;
+  onCategoryChange: (category: 'all' | 'subject' | 'colearning' | 'team' | 'study') => void;
   currentCategory: string;
   favoriteCount: number;
   onOpenFavorites: () => void;
@@ -64,7 +64,7 @@ export default function Navbar({ onCategoryChange, currentCategory, favoriteCoun
                 <button
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                   className={`px-4.5 py-2 rounded-full text-sm font-black transition-all cursor-pointer flex items-center gap-1 ${
-                    ['career', 'subject', 'colearning'].some(cat => location.pathname === `/category/${cat}`)
+                    ['subject', 'colearning'].some(cat => location.pathname === `/category/${cat}`)
                       ? 'bg-brand-orange text-white border-2 border-white/20 shadow-xs scale-105'
                       : 'text-white/90 hover:text-brand-yellow hover:bg-white/10'
                   }`}
@@ -82,19 +82,6 @@ export default function Navbar({ onCategoryChange, currentCategory, favoriteCoun
                       transition={{ duration: 0.15 }}
                       className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-56 bg-white border-2 border-dashed border-[#0E2356] rounded-2xl shadow-[6px_6px_0px_0px_#0E2356] overflow-hidden p-2 z-50"
                     >
-                      <button
-                        onClick={() => {
-                          setIsDropdownOpen(false);
-                          navigate('/category/career');
-                        }}
-                        className={`w-full text-left px-4 py-3 text-sm font-black rounded-xl transition-all cursor-pointer flex items-center gap-2 ${
-                          location.pathname === '/category/career'
-                            ? 'bg-brand-orange text-white'
-                            : 'text-[#0E2356] hover:bg-brand-bg hover:text-brand-orange'
-                        }`}
-                      >
-                        <span>職業體驗</span>
-                      </button>
                       <button
                         onClick={() => {
                           setIsDropdownOpen(false);
@@ -252,7 +239,7 @@ export default function Navbar({ onCategoryChange, currentCategory, favoriteCoun
                   <button
                     onClick={() => setIsMobileSubOpen(!isMobileSubOpen)}
                     className={`w-full text-left px-4 py-3 rounded-xl text-base font-bold transition-all flex items-center justify-between ${
-                      ['career', 'subject', 'colearning'].some(cat => location.pathname === `/category/${cat}`)
+                      ['subject', 'colearning'].some(cat => location.pathname === `/category/${cat}`)
                         ? 'bg-white/10 text-brand-yellow'
                         : 'text-white/90 hover:bg-white/10'
                     }`}
@@ -269,17 +256,6 @@ export default function Navbar({ onCategoryChange, currentCategory, favoriteCoun
                         exit={{ opacity: 0, height: 0 }}
                         className="pl-4 space-y-1 overflow-hidden"
                       >
-                        <button
-                          onClick={() => {
-                            setIsOpen(false);
-                            navigate('/category/career');
-                          }}
-                          className={`w-full text-left px-4 py-2.5 rounded-lg text-sm font-bold transition-all flex items-center gap-2 ${
-                            location.pathname === '/category/career' ? 'bg-brand-orange text-white font-black' : 'text-white/80 hover:bg-white/5'
-                          }`}
-                        >
-                          <span>職業體驗</span>
-                        </button>
                         <button
                           onClick={() => {
                             setIsOpen(false);

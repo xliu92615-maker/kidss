@@ -17,11 +17,11 @@ export default function ActivityModal({ activity, onClose, isFavorite, onFavorit
   const lineUrl = 'https://line.me/R/ti/p/@parentchildfun';
 
   // Category label configurations
-  const categoryLabels = {
-    career: '小小職業體驗營',
-    manager: '小小店長特輯',
-    activity: '精選親子活動',
-    travel: '親子旅遊資訊',
+  const categoryLabels: Record<string, string> = {
+    subject: '主題活動',
+    colearning: '親子共學',
+    study: '海外留遊學',
+    team: '團隊介紹',
   };
 
   return (

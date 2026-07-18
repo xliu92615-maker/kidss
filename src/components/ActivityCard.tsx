@@ -15,11 +15,11 @@ export default function ActivityCard({ activity, isFavorite, onFavoriteToggle, o
   const lineUrl = 'https://line.me/R/ti/p/@parentchildfun';
 
   // Category labels and colors matching geometric balance palette
-  const categoryConfig = {
-    career: { label: '職業體驗', color: 'bg-brand-orange text-white border-brand-dark' },
-    manager: { label: '小小店長', color: 'bg-brand-yellow text-brand-dark border-brand-dark' },
-    activity: { label: '親子活動', color: 'bg-baby-orange text-white border-brand-dark' },
-    travel: { label: '旅遊資訊', color: 'bg-brand-yellow-light text-brand-yellow-text border-brand-dark' },
+  const categoryConfig: Record<string, { label: string; color: string }> = {
+    subject: { label: '主題活動', color: 'bg-brand-orange text-white border-brand-dark' },
+    colearning: { label: '親子共學', color: 'bg-[#A0CED9] text-brand-dark border-brand-dark' },
+    study: { label: '海外留遊學', color: 'bg-emerald-500 text-white border-brand-dark' },
+    team: { label: '團隊介紹', color: 'bg-[#0E2356] text-white border-brand-dark' },
   };
 
   const currentCategory = categoryConfig[activity.category] || { label: '精選活動', color: 'bg-brand-bg text-brand-dark border-brand-dark' };

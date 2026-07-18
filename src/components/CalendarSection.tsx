@@ -121,13 +121,11 @@ export default function CalendarSection({ onSelectActivity }: CalendarSectionPro
                     <div>
                       <div className="flex items-center gap-2">
                         <span className={`text-[10px] font-black px-2 py-0.5 rounded-full border border-brand-dark ${
-                          act.category === 'career' ? 'bg-brand-yellow text-brand-dark' :
                           act.category === 'subject' ? 'bg-baby-blue text-white' :
                           act.category === 'colearning' ? 'bg-[#A0CED9] text-brand-dark' :
                           act.category === 'study' ? 'bg-emerald-500 text-white' : 'bg-brand-orange text-white'
                         }`}>
-                          {act.category === 'career' ? '職業體驗' :
-                           act.category === 'subject' ? '主題活動' :
+                          {act.category === 'subject' ? '主題活動' :
                            act.category === 'colearning' ? '親子共學' :
                            act.category === 'study' ? '海外留遊學' : '體驗活動'}
                         </span>

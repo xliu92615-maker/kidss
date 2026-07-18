@@ -65,8 +65,7 @@ export default function FavoritesSidebar({ isOpen, onClose, favorites, onRemoveF
                   {/* Title & info details */}
                   <div className="flex-1 min-w-0 pr-6">
                     <span className="text-[9px] px-2 py-0.5 border border-brand-dark bg-brand-yellow-light text-brand-yellow-text rounded-md font-bold">
-                      {act.category === 'career' ? '職業體驗' :
-                       act.category === 'subject' ? '主題活動' :
+                      {act.category === 'subject' ? '主題活動' :
                        act.category === 'colearning' ? '親子共學' :
                        act.category === 'study' ? '海外留遊學' : '體驗活動'}
                     </span>

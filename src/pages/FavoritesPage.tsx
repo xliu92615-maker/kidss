@@ -75,8 +75,7 @@ export default function FavoritesPage({ favorites, onRemoveFavorite }: Favorites
               <div className="flex-1 flex flex-col justify-between min-w-0 pr-6">
                 <div>
                   <span className="text-[9px] px-2.5 py-0.5 border border-brand-dark bg-brand-yellow-light text-brand-yellow-text rounded-md font-bold uppercase tracking-wider">
-                    {act.category === 'career' ? '職業體驗' :
-                     act.category === 'subject' ? '主題活動' :
+                    {act.category === 'subject' ? '主題活動' :
                      act.category === 'colearning' ? '親子共學' :
                      act.category === 'study' ? '海外留遊學' : '體驗活動'}
                   </span>

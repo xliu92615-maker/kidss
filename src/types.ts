@@ -1,4 +1,4 @@
-export type ActivityCategory = 'career' | 'subject' | 'colearning' | 'team' | 'study';
+export type ActivityCategory = 'subject' | 'colearning' | 'team' | 'study';
 
 export interface Activity {
   id: string;

@@ -52,18 +52,18 @@ export default function ActivityDetail({ favorites, onFavoriteToggle }: Activity
   const lineUrl = 'https://line.me/R/ti/p/@parentchildfun';
 
   // Category configurations
-  const categoryLabels = {
-    career: '小小職業體驗營',
-    manager: '小小店長特輯',
-    activity: '精選親子活動',
-    travel: '親子旅遊資訊',
+  const categoryLabels: Record<string, string> = {
+    subject: '主題活動',
+    colearning: '親子共學',
+    study: '海外留遊學',
+    team: '團隊介紹',
   };
 
-  const categoryColors = {
-    career: 'bg-brand-orange text-white',
-    manager: 'bg-brand-yellow text-brand-dark',
-    activity: 'bg-baby-blue text-white',
-    travel: 'bg-[#A0CED9] text-brand-dark',
+  const categoryColors: Record<string, string> = {
+    subject: 'bg-brand-orange text-white',
+    colearning: 'bg-[#A0CED9] text-brand-dark',
+    study: 'bg-emerald-500 text-white',
+    team: 'bg-[#0E2356] text-white',
   };
 
   // Get similar activities (same category, excluding current one)

@@ -48,7 +48,6 @@ export default function CategoryPage({ favorites, onFavoriteToggle }: CategoryPa
 
   // Category mapping
   const categoryLabels: Record<string, string> = {
-    career: '職業體驗',
     subject: '主題活動',
     colearning: '親子共學',
     team: '團隊介紹與理念',
@@ -57,7 +56,6 @@ export default function CategoryPage({ favorites, onFavoriteToggle }: CategoryPa
   };
 
   const categoryEmojis: Record<string, string> = {
-    career: '',
     subject: '',
     colearning: '',
     team: '',
@@ -66,7 +64,6 @@ export default function CategoryPage({ favorites, onFavoriteToggle }: CategoryPa
   };
 
   const categoryDescs: Record<string, string> = {
-    career: '小小醫生、消防員、烘焙師等角色扮演與超商、披薩、書店等一日小店長體驗，探索未來無限可能！',
     subject: '生態探索、五感彩繪、野外求生、水上運動與夢幻氣墊城堡，豐富精彩的主題活動！',
     colearning: '夜宿海生館、綠世界探險、科普恐龍、鐵道輕旅行等親子同樂共學，拉近彼此距離。',
     team: '啟夢教育專業團隊介紹與教育理念，陪伴孩子在做中學、學中玩！',

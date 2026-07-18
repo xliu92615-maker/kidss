@@ -19,7 +19,7 @@ import { Activity } from './types';
 import { MessageCircle } from 'lucide-react';
 
 export default function App() {
-  const [currentCategory, setCurrentCategory] = useState<'all' | 'career' | 'subject' | 'colearning' | 'team' | 'study'>('all');
+  const [currentCategory, setCurrentCategory] = useState<'all' | 'subject' | 'colearning' | 'team' | 'study'>('all');
   
   // State for favorites
   const [favorites, setFavorites] = useState<Activity[]>([]);

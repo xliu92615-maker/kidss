@@ -13,11 +13,11 @@ import bakingImage from './assets/images/regenerated_image_1784378399919.jpg';
 import vetImage from './assets/images/regenerated_image_1784379342558.jpg';
 
 export const ACTIVITIES: Activity[] = [
-  // Category: career (小小職業體驗營)
+  // Category: subject (主題活動)
   {
     id: 'career-1',
     title: '汪汪隊立大功 救援任務出動',
-    category: 'career',
+    category: 'subject',
     shortDesc: '汪汪隊快閃遊樂園：市區直達＋百元票價＋正版體驗',
     description: '專為小朋友設計的汪汪隊立大功快閃遊樂園！市區直達、百元票價即可享受正版授權的精彩體驗！設有氣墊滑梯、任務球池、攀爬闖關等全方位感官探索設施，讓孩子們化身汪汪隊成員，跟著阿奇、毛毛與萊德隊長一起出動救援！',
     image: pawPatrolImage,
@@ -46,7 +46,7 @@ export const ACTIVITIES: Activity[] = [
   {
     id: 'career-2',
     title: '兒童界高空彈跳＋體操體驗',
-    category: 'career',
+    category: 'subject',
     shortDesc: '飛起來了！孩子的夢想不是說說而已！【兒童界高空彈跳＋體操體驗】震撼登場',
     description: '全台首創專為兒童設計的高空彈跳與體操結合體驗！在安全防護裝備與專業教練的一對一指導下，讓孩子在空中盡情彈跳、翻轉，鍛鍊前庭覺、核心肌群與身體協調度。伴隨繽紛彩虹與快樂泡泡，勇敢突破自我，挑戰飛翔的樂趣！',
     image: bungeeImage,
@@ -75,7 +75,7 @@ export const ACTIVITIES: Activity[] = [
   {
     id: 'career-3',
     title: '巧虎見面會',
-    category: 'career',
+    category: 'subject',
     shortDesc: '最受小朋友歡迎的巧虎來囉！現場互動、唱歌跳舞，還有合照紀念！',
     description: '讓巧虎帶領寶貝們唱歌跳舞、學習生活禮貌與常規！現場還有精采的互動遊戲，以及難得的親密一對一合照環節，給孩子留下最溫暖、難忘的童年回憶！',
     image: bakingImage,
@@ -104,7 +104,7 @@ export const ACTIVITIES: Activity[] = [
   {
     id: 'career-4',
     title: '救援小英雄波力見面會',
-    category: 'career',
+    category: 'subject',
     shortDesc: '勇敢的救援小隊波力大集合！一起跳舞、學習交通安全知識，還有合照留念！',
     description: '深受寶貝們喜愛的救援小英雄波力（Poli）來囉！跟著勇敢的波力隊長一起唱歌跳舞，學習最重要的交通安全常規。現場設有互動遊戲、有獎徵答，更有難得的親密擁抱與拍立得一對一合照環節，給孩子最威風、最有安全感的快樂回憶！',
     image: vetImage,
@@ -133,7 +133,7 @@ export const ACTIVITIES: Activity[] = [
   {
     id: 'career-5',
     title: '小小太空人與天文學家：探索星際航行奧秘',
-    category: 'career',
+    category: 'subject',
     shortDesc: '穿上太空服！模擬火箭發射任務、認識太陽系與天文望遠鏡操作！',
     description: '「休士頓，我們準備起飛！」穿上超酷的白色太空航行服，開啟一場星際奇幻旅程。透過沉浸式星空投影與模擬艙，帶寶貝認識八大行星與黑洞奧秘；學習組裝與操作專業天文望遠鏡，並親手 DIY 水火箭模擬發射升空，啟發孩子對無垠宇宙與自然科學的無限好奇心。',
     image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80',
@@ -163,7 +163,7 @@ export const ACTIVITIES: Activity[] = [
   {
     id: 'career-6',
     title: '小小考古學家：恐龍化石挖掘與古生物大探險',
-    category: 'career',
+    category: 'subject',
     shortDesc: '拿著地質錘與小刷子！在仿真考古地層中敲出暴龍骨骼化石！',
     description: '重返億萬年前的侏羅紀世界！戴上考古探險探照帽、換上卡其工裝圍裙。小朋友們將拿起專業的微型地質錘、鑿刀與清掃軟刷，在精心特製的石膏地層中親手挖掘出埋藏已久的暴龍與三角龍骨骼化石，並學習如何像真正學家一樣進行編號、測量與拼接，滿足所有恐龍迷的終極願望！',
     image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80',
@@ -195,7 +195,7 @@ export const ACTIVITIES: Activity[] = [
   {
     id: 'manager-1',
     title: '幸福超商小小店長：歡迎光臨叮咚體驗',
-    category: 'career',
+    category: 'subject',
     shortDesc: '最受歡迎的小小店長！體驗補貨、整理排面、收銀嗶嗶刷條碼！',
     description: '「歡迎光臨！」響亮的口號、親切的笑容。穿上經典的超商迷你制服，親自體驗店長的一天。從在貨架上補齊最愛的糖果飲料，把標籤對齊，到最令人興奮的收銀機刷條碼、收發發票、給零錢，讓孩子在遊戲中學會金錢概念、算術與待客禮貌。',
     image: 'https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80',
@@ -225,7 +225,7 @@ export const ACTIVITIES: Activity[] = [
   {
     id: 'manager-2',
     title: '義式披薩大師：窯烤披薩店小店長',
-    category: 'career',
+    category: 'subject',
     shortDesc: '迎接客人、親手擀麵皮、鋪滿厚厚起司，最後送進窯烤爐！',
     description: '當香噴噴的披薩出爐，正是小店長的驕傲時刻！穿上經典的紅綠義式圍裙，首先學習如何站在門口熱情招呼客人，接著化身主廚在烘焙區親手揉擀麵團，挑選自己最愛的配料（鳳梨、火腿、花椰菜、多重起司），最後由主廚協助送入專業窯烤。還能體驗為自己親手做的披薩進行切片、裝盒與收銀結帳！',
     image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80',
@@ -255,7 +255,7 @@ export const ACTIVITIES: Activity[] = [
   {
     id: 'manager-3',
     title: '誠品風書店小小圖書管理員',
-    category: 'career',
+    category: 'subject',
     shortDesc: '在充滿書香的空間中，學習書籍分類、櫃檯借還書與溫馨說故事！',
     description: '給喜愛閱讀、熱愛分享的寶貝！來到美感洋溢的獨立書房，換上小小館員綠色圍裙。學習圖書條碼分類法，幫不小心迷路的書寶寶回到溫暖的家；接著在櫃檯學習使用掃描槍，幫大小讀者辦理借書與還書。最後還會挑選一本最愛的繪本，在小舞台上分享給家長與小夥伴，大大增強自信心！',
     image: 'https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?auto=format&fit=crop&w=800&q=80',
@@ -285,7 +285,7 @@ export const ACTIVITIES: Activity[] = [
   {
     id: 'manager-4',
     title: '人氣速食店小小店長：手作脆薯與漢堡吧台嗶嗶點餐',
-    category: 'career',
+    category: 'subject',
     shortDesc: '穿上速食店經典紅黃迷你制服！親手撒鹽搖薯條、擠醬汁做漢堡！',
     description: '香噴噴的黃金脆薯來囉！孩子們最喜愛的速食店長體驗盛大開跑。換上經典鮮明的迷你速食店長制服，進入潔淨安全的觀摩廚房，學習如何幫剛出爐的薯條撒鹽與搖動均勻，並親自為特製漢堡擠上美味醬汁；最後坐上點餐櫃檯，為爸爸媽媽嗶嗶點餐收銀，享受滿滿成就感！',
     image: 'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80',
@@ -315,7 +315,7 @@ export const ACTIVITIES: Activity[] = [
   {
     id: 'manager-5',
     title: '網紅人氣茶飲店小小調飲師：手搖珍珠奶茶大解密',
-    category: 'career',
+    category: 'subject',
     shortDesc: '量秤茶湯、手搖冰塊與Q彈珍珠！客製化專屬爸媽的完美甜度冰塊！',
     description: '台灣之光珍珠奶茶是怎麼變出來的？寶貝化身最潮的人氣手搖飲店長！繫上品牌休閒帆布圍裙，認識不同茶葉的迷人香氣。學習使用量杯精準測量比例，把軟Q黑糖珍珠舀入杯中，最後手拿搖飲杯大展身手「Shake Shake！」搖出綿密泡沫，客製化一杯給家長的感恩手搖飲。',
     image: 'https://images.unsplash.com/photo-1558857563-b371033873b8?auto=format&fit=crop&w=800&q=80',
@@ -345,7 +345,7 @@ export const ACTIVITIES: Activity[] = [
   {
     id: 'manager-6',
     title: '夢幻浪漫花店小小花藝店長：盆栽設計與禮盒包裝',
-    category: 'career',
+    category: 'subject',
     shortDesc: '認識季節鮮花與多肉植物！親手修剪枝葉、搭配色彩與打緞帶花結！',
     description: '走進香氣四溢、綠意盎然的夢幻花坊，換上法式莫蘭迪色系園藝圍裙。小小店長們將學習識別玫瑰、洋桔梗、尤加利葉等季節花材；練習安全的修剪技巧，依照美學比例將鮮花插入精美禮盒中。接著學習為來訪的客人推薦花語，並親手繫上優雅的絲絨緞帶，體驗最療癒的日常。',
     image: 'https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=800&q=80',
