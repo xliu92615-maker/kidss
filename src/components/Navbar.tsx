@@ -34,7 +34,7 @@ export default function Navbar({ onCategoryChange, currentCategory, favoriteCoun
         <span className="bg-brand-orange text-white text-[10px] px-2.5 py-0.5 rounded-full animate-bounce">
           感謝
         </span>
-        <span>王景富主任全額贊助活動</span>
+        <span>王景富主任贊助活動</span>
       </div>
 
       <nav className="bg-[#1145BA] border-b-4 border-brand-orange transition-all">
