@@ -7,6 +7,8 @@ import bungeeImage from './assets/images/regenerated_image_1784371093038.jpg';
 import travel6Image from './assets/images/regenerated_image_1782471206148.jpg';
 // @ts-expect-error - Vite handles jpg asset resolution dynamically
 import travel11Image from './assets/images/regenerated_image_1782471567611.jpg';
+// @ts-expect-error - Vite handles jpg asset resolution dynamically
+import bakingImage from './assets/images/regenerated_image_1784378399919.jpg';
 
 export const ACTIVITIES: Activity[] = [
   // Category: career (小小職業體驗營)
@@ -70,33 +72,32 @@ export const ACTIVITIES: Activity[] = [
   },
   {
     id: 'career-3',
-    title: '小小藍帶西點烘焙師體驗營',
+    title: '巧虎見面會',
     category: 'career',
-    shortDesc: '跟著五星級主廚，親手搓揉麵團、裝飾杯子蛋糕，探索甜點世界！',
-    description: '讓孩子化身甜點小魔法師！在專業烘焙主廚的帶領下，從秤量麵粉、打發蛋白、搓揉捏塑，到最後的擠花與糖霜裝飾，全程親自參與。不只培養手部精細動作，更能在大腦中建立容量、重量的數學概念，做出屬於自己的專屬甜點。',
-    image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80',
-    age: '3 - 12 歲 (3-6歲家長需共同創作)',
-    duration: '2 小時',
-    price: 'NT$800 (含烘焙食材、小廚神圍裙、烘焙證書、成品外帶)',
+    shortDesc: '最受小朋友歡迎的巧虎來囉！現場互動、唱歌跳舞，還有合照紀念！',
+    description: '讓巧虎帶領寶貝們唱歌跳舞、學習生活禮貌與常規！現場還有精采的互動遊戲，以及難得的親密一對一合照環節，給孩子留下最溫暖、難忘的童年回憶！',
+    image: bakingImage,
+    age: '2 - 8 歲',
+    duration: '1.5 小時',
+    price: 'NT$299',
     location: '各縣市皆有舉辦 請加Line詢問預約',
     fullAddress: '各縣市皆有舉辦 請加Line詢問預約',
     date: '場次眾多 請加LINE詢問預約報名',
-    spots: 10,
-    spotsLeft: 1,
+    spots: 20,
+    spotsLeft: 3,
     learningGoals: [
-      '透過親手揉捏麵團與塑形，鍛鍊手指小肌肉與觸覺感知',
-      '認識烘焙基本食材與工具，理解化學膨脹（泡打粉/酵母）奧秘',
-      '培養耐心與專注力，學習依照食譜順序進行的邏輯步驟',
-      '美學創意培養：在杯子蛋糕與餅乾上進行色彩與圖形裝飾'
+      '透過歡樂的歌舞律動，訓練大肌肉與肢體協調能力',
+      '在互動劇場中學習生活自理、禮貌、與人分享等優良常規',
+      '與巧虎近距離接觸、擁抱，增進孩子的安全感與正向情緒發展',
+      '培養公開場合團體活動的專注力與秩序感'
     ],
     included: [
-      '特製兒童專用無毒烘焙圍裙與高帽組 (可帶回家)',
-      '全套烘焙食材與專業無明火烤箱設備使用',
-      '親手製作完成的6入精美杯子蛋糕盒 (附提袋)',
-      '小小藍帶烘焙師雙語結業證書'
+      '巧虎限定版見面禮一份 (巧虎貼紙與小畫本)',
+      '巧虎親密見面擁抱與單獨一對一合照拍立得一張',
+      '全場熱情互動歌舞律動劇場入場資格'
     ],
     isPopular: true,
-    tags: ['甜點DIY', '手部肌肉', '美學創意', '親子共創']
+    tags: ['巧虎見面會', '明星互動', '歌舞律動', '親子共學']
   },
   {
     id: 'career-4',
