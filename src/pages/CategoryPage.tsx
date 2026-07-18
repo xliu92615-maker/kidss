@@ -187,32 +187,61 @@ export default function CategoryPage({ favorites, onFavoriteToggle }: CategoryPa
                 啟夢教育｜國際留遊學
               </h1>
               <p className="text-base sm:text-lg md:text-xl text-brand-orange font-bold tracking-wide">
-                讓孩子勇敢追夢，讓世界成為孩子的教室
+                從台灣出發，走向世界，開啟孩子無限可能
               </p>
               <div className="w-16 h-1 bg-brand-orange mx-auto rounded-full mt-3"></div>
             </div>
 
-            {/* Elegant Preface Card */}
-            <div className="max-w-3xl mx-auto bg-white rounded-3xl border border-neutral-200/60 p-6 sm:p-8 shadow-sm space-y-4 text-left">
-              <p className="text-sm sm:text-base text-neutral-600 font-medium leading-relaxed">
-                我們期盼孩子勇敢逐夢，讓教育跨越國界，教育給孩子的是知識與能力；而國際視野帶來的是格局、眼界與更多人生機會。
-              </p>
-              <p className="text-sm sm:text-base text-neutral-600 font-medium leading-relaxed">
-                當知識結合國際經驗，當學習連結世界文化，孩子將擁有面對未來的自信與競爭力。
-              </p>
-              
-              <div className="border-l-4 border-brand-orange bg-brand-orange/5 p-4 sm:p-5 rounded-r-2xl mt-4 space-y-1.5">
-                <p className="text-xs sm:text-sm font-bold text-neutral-500 uppercase tracking-wider">
-                  這也是啟夢教育始終堅持的教育理念：
+            {/* Elegant Preface Cards & Grid */}
+            <div className="max-w-4xl mx-auto space-y-6 text-left">
+              <div className="bg-white rounded-3xl border border-neutral-200/60 p-6 sm:p-8 shadow-sm space-y-4">
+                <p className="text-sm sm:text-base text-neutral-600 font-medium leading-relaxed">
+                  每一位孩子，都擁有屬於自己的夢想。有人夢想成為醫師、工程師、設計師；有人希望站上世界舞台，探索不同文化、結交來自世界各地的朋友。
                 </p>
-                <p className="text-sm sm:text-base font-black text-neutral-800 font-rounded">
-                  「教育改變人生，國際視野成就未來。」
+                <p className="text-sm sm:text-base text-neutral-600 font-medium leading-relaxed">
+                  啟夢教育相信，教育不只是學習知識，更是陪伴孩子找到方向、建立自信，培養迎向世界的能力。
+                </p>
+              </div>
+
+              {/* Education Philosophy Card with accent */}
+              <div className="bg-white rounded-3xl border border-neutral-200/60 p-6 sm:p-8 shadow-sm relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-2 h-full bg-brand-orange" />
+                <h3 className="text-lg font-black text-neutral-800 font-rounded mb-3 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-brand-orange"></span>
+                  教育理念
+                </h3>
+                <div className="space-y-3 text-neutral-600 text-sm sm:text-base font-medium leading-relaxed">
+                  <p>我們期盼孩子勇敢逐夢，讓教育跨越國界。</p>
+                  <p>教育給孩子的是知識、能力與品格；國際視野帶來的是格局、思維與更多人生的可能。</p>
+                  <p>知識能夠改變現在，而國際視野，將決定孩子未來能站得多高、走得多遠。兩者相輔相成，才能培養真正具備世界競爭力的新世代人才。</p>
+                </div>
+                <div className="mt-5 pt-4 border-t border-neutral-100">
+                  <p className="text-xs sm:text-sm font-bold text-neutral-400 uppercase tracking-wider mb-1">
+                    這也是啟夢教育一路以來始終堅持的信念：
+                  </p>
+                  <p className="text-sm sm:text-base font-black text-brand-orange font-rounded">
+                    教育改變人生，國際視野成就未來。
+                  </p>
+                </div>
+              </div>
+
+              {/* A Message to Parents Card */}
+              <div className="bg-white rounded-3xl border border-neutral-200/60 p-6 sm:p-8 shadow-sm space-y-3">
+                <h3 className="text-lg font-black text-neutral-800 font-rounded flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-brand-orange"></span>
+                  給家長的一封話
+                </h3>
+                <p className="text-sm sm:text-base text-neutral-600 font-medium leading-relaxed">
+                  每位家長都希望給孩子最好的教育。而最好的教育，不只是課本上的成績，更是讓孩子擁有選擇人生的能力。
+                </p>
+                <p className="text-sm sm:text-base text-neutral-600 font-medium leading-relaxed">
+                  啟夢教育希望成為每一個家庭最值得信賴的教育夥伴，陪伴孩子一路成長，從探索興趣、規劃學習，到走向國際舞台，共同見證每一次蛻變與成長。
                 </p>
               </div>
             </div>
 
             {/* Section Header for Gallery */}
-            <div className="text-center max-w-3xl mx-auto pt-6 space-y-2">
+            <div className="text-center max-w-3xl mx-auto pt-8 space-y-2">
               <h2 className="text-xl sm:text-2xl font-bold text-neutral-800 font-rounded">
                 歷年精彩活動回顧
               </h2>
@@ -379,6 +408,34 @@ export default function CategoryPage({ favorites, onFavoriteToggle }: CategoryPa
             >
               💬 LINE 專人預約諮詢
             </a>
+          </div>
+
+          {/* Brand Philosophy Footer */}
+          <div className="max-w-4xl mx-auto pt-16 pb-8 border-t border-neutral-200/60 text-center space-y-6 mt-16">
+            <div className="space-y-2">
+              <h3 className="text-xl sm:text-2xl font-black text-neutral-800 tracking-tight font-rounded">
+                啟夢教育｜Dream Beyond Borders
+              </h3>
+              <p className="text-brand-orange font-bold text-sm sm:text-base tracking-wide">
+                讓孩子勇敢逐夢，讓教育跨越國界。
+              </p>
+            </div>
+            
+            <div className="max-w-2xl mx-auto space-y-4 text-neutral-500 text-xs sm:text-sm font-medium leading-relaxed px-4">
+              <p className="font-mono text-neutral-400 font-bold tracking-wider uppercase text-[10px] sm:text-xs">
+                Education Shapes Ability. International Vision Creates Opportunity.
+              </p>
+              <p className="text-neutral-800 font-black font-rounded text-base">
+                教育改變人生，國際視野成就未來。
+              </p>
+              <p className="text-neutral-500">
+                從台灣出發，與世界同行，讓每一位孩子都擁有面向全球、迎向未來的無限可能。
+              </p>
+            </div>
+            
+            <div className="text-[11px] text-neutral-400 font-medium pt-6">
+              &copy; {new Date().getFullYear()} 啟夢教育 ． All Rights Reserved.
+            </div>
           </div>
 
           {/* Lightbox Modal (Fully functional with Left/Right arrows, Image counter, Close button) */}
