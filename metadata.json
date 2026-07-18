@@ -1,0 +1,6 @@
+{
+  "name": "寶貝親子趣Kids Go！",
+  "description": "全台最全最優惠兒童活動網站",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

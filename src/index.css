@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans TC", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Microsoft JhengHei", system-ui, sans-serif;
+  --font-rounded: "Noto Sans TC", "Fredoka", sans-serif;
+  
+  --color-brand-orange: #FF5E00;
+  --color-brand-orange-hover: #D34F00;
+  --color-brand-yellow: #FFC400;
+  --color-brand-yellow-light: #FFF4CC;
+  --color-brand-yellow-text: #D34F00;
+  --color-brand-bg: #F5F8FF;
+  --color-brand-dark: #0E2356;
+  --color-brand-gray: #213970;
+  --color-brand-muted: #49649F;
+  --color-brand-border: #C7D7F5;
+  
+  --color-line-green: #06C755;
+  --color-line-green-hover: #05B34C;
+  
+  --color-baby-pink: #FFEDF0;
+  --color-baby-orange: #FF5E00;
+  --color-baby-blue: #1145BA;
+  --color-baby-yellow: #FFCE00;
+  --color-baby-teal: #20B2AA;
+  --color-baby-purple: #7B2CBF;
+}
+
+/* Custom fine-tuning global tweaks */
+body {
+  font-family: var(--font-rounded);
+  background-color: var(--color-brand-bg);
+  color: var(--color-brand-gray);
+  font-weight: 400; /* 更細緻的 400 (Regular) 思源黑體 */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-rounded);
+  font-weight: 700; /* 從極粗的 900 調降為優雅細緻的 700 */
+  letter-spacing: -0.01em;
+}
+
+.font-rounded {
+  font-family: var(--font-rounded);
+}
+
+/* Custom scrollbar to keep layout clean and kid-friendly */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-brand-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-yellow);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-orange);
+}
