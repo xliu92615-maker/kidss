@@ -2,7 +2,7 @@ import { Activity, Testimonial, FAQItem } from './types';
 // @ts-expect-error - Vite handles jpg asset resolution dynamically
 import pawPatrolImage from './assets/images/regenerated_image_1784370641868.jpg';
 // @ts-expect-error - Vite handles jpg asset resolution dynamically
-import bungeeImage from './assets/images/regenerated_image_1784371093038.jpg';
+import bungeeImage from './assets/images/regenerated_image_1784370854694.jpg';
 // @ts-expect-error - Vite handles jpg asset resolution dynamically
 import farmerImage from './assets/images/regenerated_image_1784371093038.jpg';
 // @ts-expect-error - Vite handles jpg asset resolution dynamically

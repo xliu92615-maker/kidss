@@ -6,6 +6,7 @@ import {
   ArrowLeft, Heart, Calendar, Clock, MapPin, Sparkles, 
   Award, CheckCircle, MessageCircle, Info, Share2, Copy, Check
 } from 'lucide-react';
+import FarmerActivityImage from '../components/FarmerActivityImage';
 
 interface ActivityDetailProps {
   favorites: Activity[];
@@ -137,12 +138,19 @@ export default function ActivityDetail({ favorites, onFavoriteToggle }: Activity
           <div className="bg-white rounded-2xl border-2 border-brand-dark overflow-hidden shadow-[6px_6px_0px_0px_#2D3436]">
             {/* Aspect Ratio Header Image */}
             <div className="relative aspect-[16/9] w-full bg-brand-bg border-b-2 border-brand-dark">
-              <img
-                src={activity.image}
-                alt={activity.title}
-                referrerPolicy="no-referrer"
-                className="w-full h-full object-cover"
-              />
+              {activity.id === 'travel-2' ? (
+                <FarmerActivityImage
+                  alt={activity.title}
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <img
+                  src={activity.image}
+                  alt={activity.title}
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-cover"
+                />
+              )}
               {/* Overlays */}
               <div className="absolute top-4 left-4 flex gap-1.5">
                 <span className={`px-3 py-1.5 border-2 border-brand-dark rounded-full text-xs font-black shadow-xs ${categoryColors[activity.category]}`}>

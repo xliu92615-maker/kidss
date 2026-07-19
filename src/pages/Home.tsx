@@ -13,7 +13,7 @@ import ActivityCard from '../components/ActivityCard';
 // @ts-ignore
 import charityImage from '../assets/images/regenerated_image_1784366194627.png';
 // @ts-ignore
-import farmerImage from '../assets/images/farmer_planting_banner_1784375020517.jpg';
+import farmerBannerImage from '../assets/images/farmer_planting_banner_1784375020517.jpg';
 
 interface HomeProps {
   favorites: Activity[];
@@ -39,13 +39,13 @@ export default function Home({ favorites, onFavoriteToggle }: HomeProps) {
     },
     {
       id: 'slide-2',
-      image: farmerImage,
-      title: '2024種植行動．啟夢快樂小農夫',
-      subtitle: '親手撒播、用心分享，和孩子們一起成為大地的守護者！',
-      badge: '食農體驗',
-      badgeColor: 'bg-brand-yellow text-brand-dark',
-      link: '/category/subject',
-      hideButtons: true
+      image: farmerBannerImage,
+      title: '小農夫生存挑戰 ── 限時半價優惠中！',
+      subtitle: '一場突如其來的大雨打亂了農場！現在需要勇敢的小農夫們出動完成任務！活動費用半價優惠 399 元！',
+      badge: '限時半價',
+      badgeColor: 'bg-brand-orange text-white',
+      link: '/activity/travel-2',
+      hideButtons: false
     }
   ];
 

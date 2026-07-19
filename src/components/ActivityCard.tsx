@@ -2,6 +2,7 @@ import React from 'react';
 import { Activity } from '../types';
 import { Heart, Calendar, Clock, MapPin, Users, Award, AlertCircle, ExternalLink } from 'lucide-react';
 import { motion } from 'motion/react';
+import FarmerActivityImage from './FarmerActivityImage';
 
 interface ActivityCardProps {
   activity: Activity;
@@ -32,12 +33,19 @@ export default function ActivityCard({ activity, isFavorite, onFavoriteToggle, o
       
       {/* Card Image Area */}
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-brand-bg border-b-2 border-brand-dark">
-        <img
-          src={activity.image}
-          alt={activity.title}
-          referrerPolicy="no-referrer"
-          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-102"
-        />
+        {activity.id === 'travel-2' ? (
+          <FarmerActivityImage
+            alt={activity.title}
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-102"
+          />
+        ) : (
+          <img
+            src={activity.image}
+            alt={activity.title}
+            referrerPolicy="no-referrer"
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-102"
+          />
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
         
         {/* Floating Category Badge */}
