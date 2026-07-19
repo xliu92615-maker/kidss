@@ -11,6 +11,8 @@ import travel11Image from './assets/images/regenerated_image_1782471567611.jpg';
 import bakingImage from './assets/images/regenerated_image_1784378399919.jpg';
 // @ts-expect-error - Vite handles jpg asset resolution dynamically
 import vetImage from './assets/images/regenerated_image_1784379342558.jpg';
+// @ts-expect-error - Vite handles jpg asset resolution dynamically
+import creativeArtImage from './assets/images/regenerated_image_1784451946363.jpg';
 
 export const ACTIVITIES: Activity[] = [
   // Category: subject (主題活動)
@@ -406,33 +408,33 @@ export const ACTIVITIES: Activity[] = [
   },
   {
     id: 'activity-2',
-    title: '五感彩繪藝術派對：瘋狂水球與畫布創作',
+    title: '公主夢成真！專業兒童彩妝體驗、夢幻造型',
     category: 'subject',
-    shortDesc: '拋開束縛！用手掌、腳丫與水球，塗抹出最大膽繽紛的藝術大作！',
-    description: '這裡沒有「不可以」！在全無毒、可水洗的巨幅畫布空間裡，寶貝可以盡情用雙手、雙腳甚至水球沾滿七彩繽紛的顏料，潑灑出最真摯的藝術創意。這是一場解放壓力的五感派對，刺激視覺與觸覺神經，家長也可以一起加入，與孩子共同繪製一幅值得一輩子收藏的「家庭大壁畫」。',
-    image: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=800&q=80',
-    age: '2 - 8 歲',
-    duration: '1.5 小時',
-    price: 'NT$900 (含進口無毒顏料、防髒畫衣、畫布、親子共創大相框)',
+    shortDesc: '前20位報名贈 Shushu & Sassy冰雪奇緣聯名款彩妝乙組！',
+    description: '孩子的童年只有一次，讓我們一起陪伴她，完成一次屬於自己的公主夢✨ 前20位報名即贈送 Shushu & Sassy 冰雪奇緣聯名款彩妝乙組！名額有限，額滿為止。專業兒童彩妝體驗與夢幻公主造型，讓寶貝實現心中的美麗童話。',
+    image: creativeArtImage,
+    age: '3 - 12 歲',
+    duration: '2 小時',
+    price: 'NT$450 (含限定奢華彩妝組、公主禮服租借、一對一美甲美髮造型、沙龍攝影與大相框)',
     location: '各縣市皆有舉辦 請加Line詢問預約',
-    fullAddress: '各縣市皆有舉辦 請加Line詢問預約',
+    fullAddress: '各縣市精選星級飯店、美學特約空間 (請加LINE確認最新預訂名額)',
     date: '場次眾多 請加LINE詢問預約報名',
-    spots: 12,
-    spotsLeft: 4,
+    spots: 20,
+    spotsLeft: 6,
     learningGoals: [
-      '徹底解放情緒，透過色彩潑灑表達內心感受與創造力',
-      '極致開發觸覺、視覺與動覺等多元感官刺激',
-      '打破規矩界限，學會「在藝術中沒有標準答案」的自信心',
-      '提升肌肉大動作的協調與投擲運動感知'
+      '圓滿公主夢想，提升個人美感素養與自我認同',
+      '體驗無毒安全的兒童專用彩妝與專業美甲設計',
+      '自信展現自我，在舞台或合影中大方展露笑容',
+      '增進親子情感，共同記錄童年最夢幻耀眼的瞬間'
     ],
     included: [
-      '全身型透氣防髒防水畫衣、拋棄式鞋套現場提供',
-      '符合歐盟最高標準之防過敏、可水洗無毒藝術顏料',
-      '親子專屬客製厚磅小畫布一面 (可裱框帶回家)',
-      '洗沐清理區（提供溫水洗滌、吹風機、溫和洗沐乳）'
+      'Shushu & Sassy 冰雪奇緣聯名款彩妝組乙份 (限定前20位)',
+      '專業無毒彩妝、夢幻造型與精緻公主禮服現場體驗',
+      '一對一造型師量身打造公主妝容與精緻美甲服務',
+      '專屬夢幻場景精緻拍照留念與數位電子照片提供'
     ],
-    isNew: false,
-    tags: ['美學塗鴉', '感官統合', '無毒顏料', '創意解放']
+    isNew: true,
+    tags: ['公主夢成真', '彩妝體驗', '無毒彩妝', '夢幻造型']
   },
   {
     id: 'activity-3',
@@ -528,32 +530,33 @@ export const ACTIVITIES: Activity[] = [
   // Category: travel (親子旅遊資訊)
   {
     id: 'travel-1',
-    title: '【宜蘭放鬆一日遊】餵小鹿、手作蔥油餅與溫泉魚療療癒指南',
+    title: '【夢幻公主日】公主夢成真！專業兒童彩妝體驗、夢幻造型',
     category: 'colearning',
-    shortDesc: '精選宜蘭最推親子路線：親密接觸超萌水豚與梅花鹿，體驗農作快樂！',
-    description: '想帶寶貝去宜蘭，這條路線絕對是首選！一早出發前往綠意盎然的「幸福青青農場」，這裡的水豚、羊駝和梅花鹿極度親人，孩子能手拿牧草進行超近距離餵食。中午來到三星體驗親手拔蔥、洗蔥，並桿麵製作外酥內軟、爆多蔥汁的古早味蔥油餅，寓教於樂。下午則到礁溪体验腳底溫泉，被溫泉魚親吻腳丫。完美的週末一日遊，輕鬆省心！',
-    image: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80',
-    age: '適合所有年齡層',
-    duration: '一日行程建議 (約 8 - 10 小時)',
-    price: '免費旅遊資訊推薦 (可透過官方LINE代訂獨家優惠套票，享9折)',
+    shortDesc: '前20位報名贈 Shushu & Sassy冰雪奇緣聯名款彩妝乙組！',
+    description: '孩子的童年只有一次，讓我們一起陪伴她，完成一次屬於自己的公主夢✨ 前20位報名即贈送 Shushu & Sassy 冰雪奇緣聯名款彩妝乙組！名額有限，額滿為止。專業兒童彩妝體驗與夢幻公主造型，讓寶貝實現心中的美麗童話。',
+    image: creativeArtImage,
+    age: '3 - 12 歲',
+    duration: '2 小時',
+    price: 'NT$450 (含限定奢華彩妝組、公主禮服租借、一對一美甲美髮造型、沙龍攝影與大相框)',
     location: '各縣市皆有舉辦 請加Line詢問預約',
-    fullAddress: '各縣市皆有舉辦 請加Line詢問預約',
+    fullAddress: '各縣市精選星級飯店、美學特約空間 (請加LINE確認最新預訂名額)',
     date: '場次眾多 請加LINE詢問預約報名',
-    spots: 100,
-    spotsLeft: 99,
+    spots: 20,
+    spotsLeft: 6,
     learningGoals: [
-      '親近溫和動物，學習如何愛護生命、體貼與動物相處的界限',
-      '親自踏入泥土拔蔥，理解「從農田到餐桌」的食物價值與辛勞',
-      '探索地熱與溫泉的自然地理常識'
+      '圓滿公主夢想，提升個人美感素養與自我認同',
+      '體驗無毒安全的兒童專用彩妝與專業美甲設計',
+      '自信展現自我，在舞台或合影中大方展露笑容',
+      '增進親子情感，共同記錄童年最夢幻耀眼的瞬間'
     ],
     included: [
-      '完整行程規劃 PDF 攻略（含避塞車祕訣、停車推薦、私房美食）',
-      '合作農場免排隊VIP通道預約資格',
-      '親子專屬蔥油餅DIY折價券 (下載出示即可使用)',
-      '官方LINE全天候旅遊即時諮詢與地圖導航協助'
+      'Shushu & Sassy 冰雪奇緣聯名款彩妝組乙份 (限定前20位)',
+      '專業無毒彩妝、夢幻造型與精緻公主禮服現場體驗',
+      '一對一造型師量身打造公主妝容與精緻美甲服務',
+      '專屬夢幻場景精緻拍照留念與數位電子照片提供'
     ],
     isPopular: true,
-    tags: ['宜蘭一日遊', '動物餵食', '手作拔蔥', '懶人包攻略']
+    tags: ['公主夢成真', '彩妝體驗', '無毒彩妝', '夢幻造型']
   },
   {
     id: 'travel-2',
