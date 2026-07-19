@@ -73,39 +73,6 @@ export default function CharityPage() {
         </Link>
       </div>
 
-      {/* Hero Banner Area */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative rounded-3xl overflow-hidden border-2 border-brand-dark bg-gradient-to-br from-brand-orange/10 via-white to-brand-yellow/10 p-6 sm:p-12 shadow-[6px_6px_0px_0px_#0E2356] text-center sm:text-left">
-          {/* Decorative floating shapes */}
-          <div className="absolute -top-12 -right-12 w-32 h-32 bg-brand-yellow/30 rounded-full blur-xl pointer-events-none" />
-          <div className="absolute -bottom-12 -left-12 w-40 h-40 bg-brand-orange/20 rounded-full blur-2xl pointer-events-none" />
-          
-          <div className="max-w-3xl space-y-4 relative z-10">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-orange text-white border-2 border-brand-dark text-xs font-black uppercase font-rounded shadow-[2px_2px_0px_0px_#0E2356]">
-              <Heart className="w-4 h-4 fill-white animate-pulse" />
-              <span>大手牽小手・愛心齊步走</span>
-            </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-brand-dark leading-tight font-rounded">
-              用體驗點亮世界，<br className="sm:hidden" />
-              讓愛在做中學裡發芽 🤝❤️
-            </h1>
-            <p className="text-sm sm:text-base text-brand-muted font-bold leading-relaxed max-w-2xl">
-              啟夢教育相信：<strong>「善良與同理心是需要練習的技能」</strong>。除了探索職業與旅遊，我們定期舉辦親子公益活動，帶領孩子走入偏鄉、海灘與社區，親手付出愛心、關懷他人。在孩子心中播下一顆溫暖的種子，讓他們從小學會感恩與分享。
-            </p>
-            <div className="pt-2">
-              <a
-                href={lineUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-brand-orange hover:bg-brand-orange/95 text-white font-black border-2 border-brand-dark rounded-full shadow-[3px_3px_0px_0px_#0E2356] active:translate-y-0.5 active:shadow-[1px_1px_0px_0px_#0E2356] transition-all font-rounded"
-              >
-                <MessageCircle className="w-5 h-5 fill-white" />
-                <span>立即 LINE 報名 / 洽詢公益合作</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Core Educational Philosophy Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -140,64 +107,6 @@ export default function CharityPage() {
         </div>
       </div>
 
-      {/* Charity Projects Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-        <div className="text-center md:text-left space-y-1">
-          <span className="text-brand-orange font-black text-xs uppercase tracking-wider font-rounded block">
-            🍀 CURRENT PROGRAMS
-          </span>
-          <h2 className="text-2xl sm:text-3xl font-black text-brand-dark font-rounded">
-            愛心起步走：我們正在舉辦的公益項目 🌸
-          </h2>
-          <p className="text-xs sm:text-sm text-brand-muted font-bold">
-            所有公益活動均為「無償、非營利」舉辦，並會與在地合法立案之社福團體攜手合作，確保安全無虞。
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {charityProjects.map((p) => {
-            const IconComponent = p.icon;
-            return (
-              <div
-                key={p.id}
-                className="bg-white rounded-2xl border-2 border-brand-dark shadow-[4px_4px_0px_0px_#0E2356] p-5 sm:p-6 flex flex-col justify-between hover:translate-x-1 hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_#0E2356] transition-all"
-              >
-                <div className="space-y-4">
-                  <div className="flex justify-between items-start gap-2">
-                    <div className={`p-3 rounded-xl border-2 border-brand-dark ${p.color}`}>
-                      <IconComponent className="w-6 h-6" />
-                    </div>
-                    <span className={`px-2.5 py-1 text-[10px] font-black border-2 border-brand-dark rounded-full ${p.badgeBg}`}>
-                      {p.badge}
-                    </span>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <h3 className="text-lg font-black text-brand-dark font-rounded">{p.title}</h3>
-                    <p className="text-xs text-brand-muted font-bold leading-relaxed">{p.desc}</p>
-                  </div>
-                </div>
-
-                <div className="mt-5 pt-4 border-t-2 border-dashed border-brand-border flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
-                  <div className="text-xs text-brand-dark font-black">
-                    🎯 階段愛心目標：
-                    <span className="text-brand-orange">{p.target}</span>
-                  </div>
-                  <a
-                    href={lineUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-black text-brand-orange hover:underline font-rounded"
-                  >
-                    <span>瞭解活動報名詳情</span>
-                    <ChevronRight className="w-4 h-4" />
-                  </a>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
 
       {/* Interactive Mock Certificate Generator for Kids */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

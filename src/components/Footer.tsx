@@ -73,16 +73,16 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-xs text-gray-400 font-bold">
               <li>
-                <a href="#activities-section" className="hover:text-brand-orange transition-colors">➔ 小小職業體驗營</a>
+                <Link to="/category/subject" className="hover:text-brand-orange transition-colors">➔ 主題活動</Link>
               </li>
               <li>
-                <a href="#activities-section" className="hover:text-brand-orange transition-colors">➔ 超商、餐廳小小店長</a>
+                <Link to="/category/study" className="hover:text-brand-orange transition-colors">➔ 國際留遊學</Link>
               </li>
               <li>
-                <a href="#activities-section" className="hover:text-brand-orange transition-colors">➔ 自然生態與親子手作</a>
+                <Link to="/category/team" className="hover:text-brand-orange transition-colors">➔ 團隊介紹</Link>
               </li>
               <li>
-                <a href="#activities-section" className="hover:text-brand-orange transition-colors">➔ 精選親子一日、兩日旅遊資訊</a>
+                <Link to="/faq" className="hover:text-brand-orange transition-colors">➔ 常見問題</Link>
               </li>
             </ul>
           </div>

@@ -1,10 +1,9 @@
 import { Activity, Testimonial, FAQItem } from './types';
 // @ts-expect-error - Vite handles jpg asset resolution dynamically
 import pawPatrolImage from './assets/images/regenerated_image_1784370641868.jpg';
-// @ts-expect-error - Vite handles jpg asset resolution dynamically
-import bungeeImage from './assets/images/regenerated_image_1784370854694.jpg';
-// @ts-expect-error - Vite handles jpg asset resolution dynamically
-import farmerImage from './assets/images/regenerated_image_1784371093038.jpg';
+const bungeeImage = 'https://images.unsplash.com/photo-1537655780520-1e392edd816a?auto=format&fit=crop&w=800&q=80';
+// @ts-expect-error - Vite handles png asset resolution dynamically
+import farmerImage from './assets/images/regenerated_image_1784470844781.png';
 // @ts-expect-error - Vite handles jpg asset resolution dynamically
 import travel6Image from './assets/images/regenerated_image_1782471206148.jpg';
 // @ts-expect-error - Vite handles jpg asset resolution dynamically
@@ -136,33 +135,32 @@ export const ACTIVITIES: Activity[] = [
   },
   {
     id: 'career-5',
-    title: '小小太空人與天文學家：探索星際航行奧秘',
+    title: '妙妙犬布麗見面會',
     category: 'subject',
-    shortDesc: '穿上太空服！模擬火箭發射任務、認識太陽系與天文望遠鏡操作！',
-    description: '「休士頓，我們準備起飛！」穿上超酷的白色太空航行服，開啟一場星際奇幻旅程。透過沉浸式星空投影與模擬艙，帶寶貝認識八大行星與黑洞奧秘；學習組裝與操作專業天文望遠鏡，並親手 DIY 水火箭模擬發射升空，啟發孩子對無垠宇宙與自然科學的無限好奇心。',
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80',
-    age: '5 - 12 歲',
-    duration: '2.5 小時',
-    price: 'NT$950 (含太空制服體驗、DIY水火箭材料包、星空投影燈、證書)',
-    location: '台北天文科學教育館 / 台中自然科學博物館 鄰近基地',
-    fullAddress: '台北市士林區 / 台中市北區科學園區',
-    date: '每週六 下午 13:30 - 16:00',
-    spots: 15,
-    spotsLeft: 5,
+    shortDesc: '最受歡迎的布麗來囉！親子互動、合影打卡、歡樂遊戲，陪伴寶貝快樂過暑假！',
+    description: '深受小朋友喜愛的妙妙犬布麗（Bluey）見面會來囉！現場準備了精彩有趣的親子互動遊戲，讓家長與孩子一同參與，增進家庭親密情感。還有專屬的合影打卡時間，與布麗近距離接觸拍照留念，以及豐富歡樂的團體遊戲，給孩子最快樂、最溫馨的童年回憶！',
+    image: 'https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&w=800&q=80',
+    age: '3 - 12 歲',
+    duration: '1.5 小時',
+    price: 'NT$399 一大一小',
+    location: '各縣市皆有舉辦 請加Line詢問預約',
+    fullAddress: '各縣市皆有舉辦 請加Line詢問預約',
+    date: '場次眾多 請加LINE詢問預約報名',
+    spots: 20,
+    spotsLeft: 6,
     learningGoals: [
-      '理解太陽系運行邏輯與重力基礎物理概念',
-      '培養空間邏輯與天文觀測的科學素養',
-      '手作氣壓水火箭，實踐作用力與反作用力科學原理',
-      '激發團隊合作與太空航行任務解題能力'
+      '在親子互動遊戲中，增進家長與寶貝間的親密默契',
+      '透過經典唱跳律動，鍛鍊寶貝的肢體協調與音樂節奏感',
+      '與超人氣明星布麗擁抱合照，豐富孩子的童年想像力',
+      '引導孩子融入團體情境，培養樂觀與積極的社交能力'
     ],
     included: [
-      '連身式NASA風仿真太空服與頭盔道具拍照',
-      '手作DIY氣壓式水火箭材料包一組 (含發射台)',
-      '居家星空投影小夜燈紀念品',
-      '「星際航行探險家」雙語結業證書'
+      '布麗親密見面擁抱與單獨一對一合照拍立得一張',
+      '見面會特製限定貼紙與蓋章卡一組',
+      '全場熱情互動與親子遊戲體驗資格'
     ],
     isNew: true,
-    tags: ['太空人', '天文探索', '水火箭', '自然科學']
+    tags: ['布麗見面會', '親子互動', '合影打卡', '歡樂遊戲']
   },
   {
     id: 'career-6',
@@ -909,7 +907,7 @@ export const FAQS: FAQItem[] = [
   {
     id: 'faq-2',
     question: '活動進行中，家長可以全程在旁陪同或一起參與嗎？',
-    answer: '是的！「寶貝親子趣」的核心理念就是增進親子親密互動。除了少數場地空間有限的特定活動（如特定超商內部收銀台，家長會在櫃檯外側線後拍照觀看），95% 的活動皆「非常歡迎且鼓勵家長全程陪同與共創」！每位報名兒童的費用皆已包含至少 1 位家長免費陪同。'
+    answer: '是的！「啟夢教育」的核心理念就是增進親子親密互動。除了少數場地空間有限的特定活動（如特定超商內部收銀台，家長會在櫃檯外側線後拍照觀看），95% 的活動皆「非常歡迎且鼓勵家長全程陪同與共創」！每位報名兒童的費用皆已包含至少 1 位家長免費陪同。'
   },
   {
     id: 'faq-3',
@@ -924,6 +922,6 @@ export const FAQS: FAQItem[] = [
   {
     id: 'faq-5',
     question: '請問活動費用包含保險嗎？安全防護如何？',
-    answer: '是的！凡是「寶貝親子趣」主辦或推薦的收費營隊與戶外活動，費用中皆已包含「兒童特定活動意外傷害保險（含傷害醫療）」及「公共意外責任險」。活動現場均配備急救箱、所有耗材皆採用食品級或無毒認證材料，且每場活動的師生比均嚴格控制在 1:5 至 1:8 以內，安全防護滴水不漏。'
+    answer: '是的！凡是「啟夢教育」主辦或推薦的收費營隊與戶外活動，費用中皆已包含「兒童特定活動意外傷害保險（含傷害醫療）」及「公共意外責任險」。活動現場均配備急救箱、所有耗材皆採用食品級 or 無毒認證材料，且每場活動的師生比均嚴格控制在 1:5 至 1:8 以內，安全防護滴水不漏。'
   }
 ];

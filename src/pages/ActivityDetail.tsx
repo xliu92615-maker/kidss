@@ -342,7 +342,7 @@ export default function ActivityDetail({ favorites, onFavoriteToggle }: Activity
             {/* Secure badge */}
             <div className="text-center">
               <span className="inline-flex items-center gap-1 text-[10px] text-brand-muted font-bold">
-                🛡️ 寶貝親子趣官方保障 • 24小時無憂安全保障
+                🛡️ 啟夢教育官方保障 • 24小時無憂安全保障
               </span>
             </div>
 
@@ -352,7 +352,7 @@ export default function ActivityDetail({ favorites, onFavoriteToggle }: Activity
           <div className="bg-brand-yellow-light/20 rounded-2xl border-2 border-brand-dark p-6 shadow-[4px_4px_0px_0px_#2D3436] flex gap-3.5">
             <span className="text-3xl shrink-0">💡</span>
             <div className="text-xs text-brand-dark leading-relaxed font-bold">
-              <h4 className="font-black text-sm mb-1">關於「寶貝親子趣」品質承諾</h4>
+              <h4 className="font-black text-sm mb-1">關於「啟夢教育」品質承諾</h4>
               我們保證：所有體驗活動均經專員實地勘查。師資均備有幼教或專業證照，使用耗材 100% 採用無毒/環保安全材料，活動期間全程投保公共意外責任險。
             </div>
           </div>

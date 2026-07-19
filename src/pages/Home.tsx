@@ -11,9 +11,9 @@ import { ACTIVITIES, TESTIMONIALS, FAQS } from '../data';
 import { Activity } from '../types';
 import ActivityCard from '../components/ActivityCard';
 // @ts-ignore
-import charityImage from '../assets/images/regenerated_image_1784366194627.png';
+import charityImage from '../assets/images/regenerated_image_1784472236633.png';
 // @ts-ignore
-import farmerBannerImage from '../assets/images/farmer_planting_banner_1784375020517.jpg';
+import farmerBannerImage from '../assets/images/regenerated_image_1784467882539.jpg';
 
 interface HomeProps {
   favorites: Activity[];
@@ -95,44 +95,8 @@ export default function Home({ favorites, onFavoriteToggle }: HomeProps) {
                 src={slides[currentSlide].image}
                 alt={slides[currentSlide].title}
                 referrerPolicy="no-referrer"
-                className="w-full h-full object-cover brightness-75"
+                className="w-full h-full object-cover"
               />
-              {/* Slide text details overlays */}
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/95 via-brand-dark/40 to-transparent flex flex-col justify-end pb-12 sm:pb-16 lg:pb-20 px-4 sm:px-8">
-                <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 space-y-2 sm:space-y-4">
-                  {slides[currentSlide].badge && (
-                    <div>
-                      <span className={`inline-flex items-center px-3 py-1 border-2 border-brand-dark rounded-full text-[10px] sm:text-xs font-black shadow-sm ${slides[currentSlide].badgeColor}`}>
-                        {slides[currentSlide].badge}
-                      </span>
-                    </div>
-                  )}
-                  <h2 className="text-xl sm:text-3xl lg:text-4xl font-black text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] font-rounded">
-                    {slides[currentSlide].title}
-                  </h2>
-                  <p className="text-xs sm:text-base text-gray-200 font-bold max-w-2xl drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] leading-relaxed line-clamp-2">
-                    {slides[currentSlide].subtitle}
-                  </p>
-                  {!slides[currentSlide].hideButtons && (
-                    <div className="pt-2 flex gap-3">
-                      <Link
-                        to={slides[currentSlide].link}
-                        className="px-5 py-2.5 sm:px-6 sm:py-3 bg-brand-yellow hover:bg-brand-yellow/90 border-2 border-brand-dark text-brand-dark font-black text-xs sm:text-sm rounded-full shadow-[3px_3px_0px_0px_#0E2356] active:translate-y-0.5 active:shadow-[1px_1px_0px_0px_#0E2356] transition-all font-rounded"
-                      >
-                        立即探索課程
-                      </Link>
-                      <a
-                        href={lineUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="px-5 py-2.5 sm:px-6 sm:py-3 bg-line-green hover:bg-line-green-hover border-2 border-brand-dark text-white font-black text-xs sm:text-sm rounded-full shadow-[3px_3px_0px_0px_#0E2356] active:translate-y-0.5 active:shadow-[1px_1px_0px_0px_#0E2356] transition-all flex items-center gap-1 font-rounded"
-                      >
-                        加 LINE 客服諮詢
-                      </a>
-                    </div>
-                  )}
-                </div>
-              </div>
             </motion.div>
           </AnimatePresence>
 
@@ -181,6 +145,24 @@ export default function Home({ favorites, onFavoriteToggle }: HomeProps) {
         <p className="text-sm sm:text-base text-brand-muted font-bold max-w-2xl mx-auto leading-relaxed">
           全台最專業、最高規格的親子活動及職人體驗代訂推薦！我們深信「生活即教育，體驗即學習」，省去繁雜的多站比價與註冊手續，一鍵加 LINE 客服立刻由小幫手為您安排！
         </p>
+      </div>
+
+      {/* 2.5 Brand Introduction */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center space-y-6">
+        <h2 className="text-2xl sm:text-3xl font-black text-brand-dark font-rounded leading-snug">
+          啟夢教育｜陪伴每一段成長，實現每一個夢想
+        </h2>
+        <div className="space-y-4 text-sm sm:text-base text-brand-muted font-bold leading-relaxed">
+          <p>
+            啟夢教育秉持著「陪伴、專業、創新」的教育理念，我們相信，教育不僅侷限於課堂，更應延伸至生活中的每一次探索、每一場活動、每一段旅程，讓每位小朋友都能在快樂中學習，在體驗中成長！
+          </p>
+          <p>
+            未來，我們將持續推出更多優質課程、親子活動、國內外文化交流、國際留遊學、公益計畫，讓每一位孩子、都能在這裡找到屬於自己的舞台，累積更多知識、創造更多幸福回憶。
+          </p>
+          <p className="text-brand-orange font-black text-base sm:text-lg">
+            因為我們相信：教育，能改變人生；陪伴，能創造感動；而每一次相遇，都將成為未來最珍貴的回憶。
+          </p>
+        </div>
       </div>
 
       {/* 3. 認識啟夢 (Get to Know QiMeng / Brand Vision) - BEAUTIFUL REDESIGNED SECTION */}

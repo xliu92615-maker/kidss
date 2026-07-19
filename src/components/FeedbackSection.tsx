@@ -80,7 +80,7 @@ export default function FeedbackSection() {
         {/* Trust badge with neat outline */}
         <div className="mt-12 text-center bg-brand-yellow-light border-2 border-brand-dark p-6 rounded-xl shadow-[4px_4px_0px_0px_#2D3436] max-w-2xl mx-auto">
           <p className="text-xs text-brand-dark leading-relaxed font-bold">
-            💖 <b>「寶貝親子趣」承諾：</b>所有分享皆獲得家長授權同意。我們極度注重個人隱私與肖像安全，每堂活動皆配有專業隨堂攝影師，照片均可於課後透過官方 LINE 連結下載，為您珍藏孩子成長的每一個瞬間。
+            💖 <b>「啟夢教育」承諾：</b>所有分享皆獲得家長授權同意。我們極度注重個人隱私與肖像安全，每堂活動皆配有專業隨堂攝影師，照片均可於課後透過官方 LINE 連結下載，為您珍藏孩子成長的每一個瞬間。
           </p>
         </div>
 
