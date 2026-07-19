@@ -5,6 +5,9 @@ import { Activity } from '../types';
 import ActivityCard from '../components/ActivityCard';
 import { ArrowLeft, Search, RefreshCw, Star, ShieldCheck, Award, Sparkles, Heart, Smile, Users, Compass, Globe, Plane, BookOpen, Camera, Eye, ChevronLeft, ChevronRight, X, Play, Pause, Maximize2 } from 'lucide-react';
 
+// @ts-expect-error - Vite handles jpg asset resolution dynamically
+import creativeArtImage from '../assets/images/regenerated_image_1784449909878.jpg';
+
 const studyGallery = [
   { src: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80', title: '美國常春藤名校學術營' },
   { src: 'https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80', title: '日本筑波宇宙太空探險' },
@@ -16,7 +19,7 @@ const studyGallery = [
   { src: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1200&q=80', title: '歡樂戶外探索時光' },
   { src: 'https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=1200&q=80', title: '大自然生態觀察' },
   { src: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1200&q=80', title: '戶外尋寶與大地遊戲' },
-  { src: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1200&q=80', title: '五感彩繪與創意繪畫' },
+  { src: creativeArtImage, title: '專業兒童彩妝體驗、夢幻造型' },
   { src: 'https://images.unsplash.com/photo-1510531704581-5b2870972060?auto=format&fit=crop&w=1200&q=80', title: '程式積木與機器人實作' },
   { src: 'https://images.unsplash.com/photo-1530099486328-e021101a494a?auto=format&fit=crop&w=1200&q=80', title: '學員成果簡報發表會' },
   { src: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80', title: '做中學、學中玩的趣味課堂' },
