@@ -7,6 +7,8 @@ import { ArrowLeft, Search, RefreshCw, Star, ShieldCheck, Award, Sparkles, Heart
 
 // @ts-expect-error - Vite handles jpg asset resolution dynamically
 import creativeArtImage from '../assets/images/regenerated_image_1784451946363.jpg';
+// @ts-ignore
+import directorImage from '../assets/images/regenerated_image_1784564676249.png';
 
 const studyGallery = [
   { src: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80', title: '美國常春藤名校學術營' },
@@ -616,6 +618,42 @@ export default function CategoryPage({ favorites, onFavoriteToggle }: CategoryPa
               <p className="text-xs text-brand-muted font-bold leading-relaxed">
                 我們尊重每個孩子的獨特心靈與性格特質。用包容與傾聽，給予孩子最充足的正向肯定與自信能量。
               </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Director Section */}
+        <div className="bg-brand-bg rounded-3xl border-2 border-brand-dark overflow-hidden shadow-[4px_4px_0px_0px_#2D3436]">
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="aspect-[4/3] md:aspect-auto relative bg-brand-dark">
+              <img 
+                src={directorImage} 
+                alt="王景富主任" 
+                className="absolute inset-0 w-full h-full object-cover"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+            <div className="p-6 sm:p-8 lg:p-10 flex flex-col justify-center space-y-6">
+              <div>
+                <h2 className="text-2xl sm:text-3xl font-black text-brand-dark font-rounded">
+                  王景富主任
+                </h2>
+                <div className="w-12 h-1 bg-brand-orange mt-3 rounded-full" />
+              </div>
+              <div className="space-y-4 text-xs sm:text-sm text-brand-dark font-bold leading-relaxed">
+                <p>
+                  自 2023 年創立啟夢教育以來，始終秉持著「教育改變人生，國際視野成就未來」的理念，長期深耕台灣教育領域，致力於打造兼具知識、品格、國際視野與實踐能力的學習環境，陪伴每一位孩子在人生的成長道路上發掘潛能、建立自信，勇敢迎向未來。
+                </p>
+                <p>
+                  每位孩子都擁有獨一無二的天賦，而教育的價值，不只是提升學業成績，更重要的是培養良好的品格、溝通能力、創造力、獨立思考能力，以及面對未來世界所需的國際競爭力。
+                </p>
+                <p>
+                  王景富主任始終相信，一個人的成長，不只是擁有優異的成績，更重要的是擁有正確的價值觀、國際視野與服務社會的精神。教育的使命，不只是培養會讀書的人，更要培養能夠關懷他人、勇於挑戰、具備世界觀與責任感的人才。
+                </p>
+                <p>
+                  未來，啟夢教育將持續整合教育、國際留遊學、跨國文化交流、公益服務及多元學習資源，打造更完整、更具國際競爭力的教育平台，陪伴每一位孩子勇敢追逐夢想，從台灣出發，放眼世界，以知識改變人生，以視野創造未來，以公益回饋社會，成為能夠影響世界的下一代。
+                </p>
+              </div>
             </div>
           </div>
         </div>
