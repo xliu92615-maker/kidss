@@ -1,7 +1,8 @@
 import { Activity, Testimonial, FAQItem } from './types';
 // @ts-expect-error - Vite handles jpg asset resolution dynamically
 import pawPatrolImage from './assets/images/regenerated_image_1784370641868.jpg';
-const bungeeImage = 'https://images.unsplash.com/photo-1537655780520-1e392edd816a?auto=format&fit=crop&w=800&q=80';
+// @ts-expect-error - Vite handles jpg asset resolution dynamically
+import bungeeImage from './assets/images/regenerated_image_1784546159951.jpg';
 // @ts-expect-error - Vite handles png asset resolution dynamically
 import farmerImage from './assets/images/regenerated_image_1784470844781.png';
 // @ts-expect-error - Vite handles jpg asset resolution dynamically

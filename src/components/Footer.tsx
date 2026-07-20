@@ -101,10 +101,7 @@ export default function Footer() {
                 <Mail className="w-4 h-4 text-gray-500" />
                 <span>電子信箱：service@parentchildfun.com</span>
               </div>
-              <div className="flex items-center gap-2">
-                <MessageCircle className="w-4 h-4 text-gray-500" />
-                <span>官方LINE ID：@parentchildfun (含小鼠標)</span>
-              </div>
+
             </div>
           </div>
 

@@ -11,7 +11,7 @@ import { ACTIVITIES, TESTIMONIALS, FAQS } from '../data';
 import { Activity } from '../types';
 import ActivityCard from '../components/ActivityCard';
 // @ts-ignore
-import charityImage from '../assets/images/regenerated_image_1784472236633.png';
+import charityImage from '../assets/images/regenerated_image_1784546792109.png';
 // @ts-ignore
 import farmerBannerImage from '../assets/images/regenerated_image_1784467882539.jpg';
 

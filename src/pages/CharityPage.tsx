@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { Heart, Sparkles, Smile, Award, BookOpen, Gift, ArrowLeft, MessageCircle, CheckCircle, ChevronRight, Users, Trash2 } from 'lucide-react';
+import { Heart, Sparkles, Smile, Award, BookOpen, Gift, ArrowLeft, MessageCircle, CheckCircle, ChevronRight, Users, Trash2, Quote } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
+// @ts-ignore
+import charityGroupImage from '../assets/images/regenerated_image_1784546792109.png';
 
 export default function CharityPage() {
   const lineUrl = 'https://line.me/R/ti/p/@parentchildfun';
@@ -73,6 +75,53 @@ export default function CharityPage() {
         </Link>
       </div>
 
+      {/* Director's Message / Article */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-brand-yellow/15 rounded-3xl border-2 border-brand-dark p-8 sm:p-12 shadow-[6px_6px_0px_0px_#0E2356] relative overflow-hidden">
+          <div className="absolute top-4 right-6 text-brand-yellow opacity-40">
+            <Heart className="w-24 h-24" />
+          </div>
+          <div className="relative z-10 max-w-4xl mx-auto space-y-6">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 bg-white rounded-full border-2 border-brand-dark flex items-center justify-center">
+                <Quote className="w-6 h-6 text-brand-orange" />
+              </div>
+              <h2 className="text-xl sm:text-2xl font-black text-brand-dark font-rounded">
+                愛與關懷的實踐
+              </h2>
+            </div>
+            
+            <div className="space-y-4 text-sm sm:text-base text-brand-dark font-bold leading-relaxed">
+              <p>
+                教育的價值，不僅在於知識的傳遞，更在於愛與關懷的實踐。
+              </p>
+              <p>
+                王景富主任始終相信，一個人的成長，不只是學會更多技能，更要懂得關心他人、珍惜資源，並將善意化為實際行動。
+              </p>
+              <p>
+                真正的教育並非只存在於教室之中，而是體現在生活中的每一次選擇與每一次行動。當孩子願意主動幫助他人、懂得分享、學會感恩，這些品格將成為陪伴他們一生的重要力量。
+              </p>
+              <p>
+                當每個人都願意付出一點點關懷，就能匯聚成改變社會的力量；當每個家庭都願意帶著孩子參與公益，就能讓愛與善良持續傳承，讓更多需要幫助的人感受到希望與溫暖。
+              </p>
+              <p className="text-brand-orange font-black text-base sm:text-lg pt-2">
+                ✨ 教育能夠啟發夢想，公益能夠溫暖人心，而每一次真誠的付出，都將成為改變世界的一份力量。
+              </p>
+            </div>
+
+            {/* Group Photo Section */}
+            <div className="pt-6 w-full">
+              <div className="rounded-2xl border-2 border-brand-dark overflow-hidden shadow-[4px_4px_0px_0px_#0E2356] bg-brand-bg relative group">
+                <img 
+                  src={charityGroupImage} 
+                  alt="大手牽小手・愛心齊步走 大合照" 
+                  className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Core Educational Philosophy Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -121,7 +170,7 @@ export default function CharityPage() {
               小英雄的榮譽！愛心證書模擬生成器 🎓🏅
             </h2>
             <p className="text-xs text-brand-muted font-bold leading-relaxed">
-              每次帶寶貝參加完公益活動後，我們都會頒發一份<strong>紙本「啟夢公益活動參與證書」</strong>，讓孩子累積愛心點數，並在班會、升旗或備審資料上展示！
+              每次帶寶貝參加完公益並分享到群組後，可以和我們索取一份電子<strong>「啟夢公益活動參與證書」</strong>！
             </p>
             <p className="text-xs text-brand-muted font-bold leading-relaxed">
               您可以在這裡輸入寶貝的名字，預覽愛心證書的超萌模樣，激發孩子的公益熱情！
@@ -141,23 +190,6 @@ export default function CharityPage() {
                   className="w-full px-4 py-2.5 border-2 border-brand-dark rounded-xl text-xs font-bold focus:outline-none focus:ring-2 focus:ring-brand-orange"
                   maxLength={10}
                 />
-              </div>
-
-              <div className="space-y-1">
-                <label className="text-xs font-black text-brand-dark font-rounded block">選擇已參與的公益項目</label>
-                <select
-                  value={selectedProject}
-                  onChange={(e) => {
-                    setSelectedProject(e.target.value);
-                    setCertificateGenerated(false);
-                  }}
-                  className="w-full px-4 py-2.5 border-2 border-brand-dark rounded-xl text-xs font-bold bg-white focus:outline-none focus:ring-2 focus:ring-brand-orange"
-                >
-                  <option value="「為愛閱讀」偏鄉圖書募捐計畫">「為愛閱讀」偏鄉圖書募捐計畫 📚</option>
-                  <option value="「小小守護者」海洋保護淨灘小英雄">「小小守護者」海洋保護淨灘小英雄 🏖️</option>
-                  <option value="「溫慢微光」陪伴育幼院童烘焙同樂會">「溫暖微光」陪伴育幼院童烘焙同樂會 🧁</option>
-                  <option value="「愛心便當守護者」獨居長者溫馨送餐">「愛心便當守護者」獨居長者溫馨送餐 🍱</option>
-                </select>
               </div>
 
               <button
@@ -222,7 +254,7 @@ export default function CharityPage() {
                       親愛的 <span className="text-sm font-black border-b-2 border-brand-dark px-3 text-brand-orange font-rounded">{childName}</span> 寶貝：
                     </p>
                     <p className="text-xs text-brand-muted leading-relaxed max-w-md font-bold px-4">
-                      感謝您熱情參與啟夢教育舉辦之 <span className="font-black text-brand-dark font-rounded">{selectedProject}</span> 公益體驗活動。在活動中，您發揮無比的同理心與熱情，用微小的雙手為需要幫助的人們遞上無限溫暖，特頒此證，以茲鼓勵。
+                      感謝您熱情參與啟夢教育舉辦之 <span className="font-black text-brand-dark font-rounded">親子公益體驗</span> 活動。在活動中，您發揮無比的同理心與熱情，用微小的雙手為需要幫助的人們遞上無限溫暖，特頒此證，以茲鼓勵。
                     </p>
                   </div>
 
@@ -243,26 +275,6 @@ export default function CharityPage() {
             </AnimatePresence>
           </div>
 
-        </div>
-      </div>
-
-      {/* Trust & Footnote FAQ Banner */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-brand-dark text-white rounded-2xl border-2 border-brand-dark p-6 sm:p-8 shadow-[4px_4px_0px_0px_rgba(45,52,70,1)] flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
-          <div className="space-y-1">
-            <h3 className="text-lg font-black font-rounded">🤝 誠摯邀請企業與特約組織公益合作</h3>
-            <p className="text-xs text-gray-400 font-bold max-w-xl">
-              啟夢教育將 1% 的體驗活動盈餘提撥為公益發展基金。若您是有理念的社福組織、非營利小學、海洋保育協會，歡迎聯繫我們共同開發有教育意義的親子公益項目。
-            </p>
-          </div>
-          <a
-            href={lineUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-5 py-3 rounded-full bg-brand-yellow hover:bg-brand-yellow/95 text-brand-dark text-xs sm:text-sm font-black border-2 border-brand-dark whitespace-nowrap shadow-[2px_2px_0px_0px_rgba(45,52,70,1)]"
-          >
-            點我加入 LINE 聯絡客服
-          </a>
         </div>
       </div>
     </div>

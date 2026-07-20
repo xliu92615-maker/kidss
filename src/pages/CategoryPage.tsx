@@ -185,14 +185,27 @@ export default function CategoryPage({ favorites, onFavoriteToggle }: CategoryPa
             </div>
 
             {/* Premium, Clean Title & Subtitle */}
-            <div className="text-center max-w-3xl mx-auto space-y-3">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-neutral-900 tracking-tight font-rounded">
-                啟夢教育｜國際留遊學
-              </h1>
-              <p className="text-sm sm:text-base text-neutral-500 font-medium leading-relaxed">
-                每一張照片，都是孩子成長最珍貴的回憶。歡迎一起回顧啟夢教育歷年的精彩時刻。
-              </p>
-              <div className="w-12 h-1 bg-brand-orange mx-auto rounded-full mt-2"></div>
+            <div className="max-w-4xl mx-auto bg-gradient-to-br from-brand-orange/5 via-white to-brand-yellow/5 border-2 border-brand-dark p-6 sm:p-10 rounded-3xl shadow-[6px_6px_0px_0px_#0E2356] text-center space-y-6">
+              <div className="space-y-2">
+                <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-brand-orange/10 border-2 border-brand-orange text-brand-orange rounded-full text-xs font-black font-rounded">
+                  🌍 迎向國際 ‧ 勇敢逐夢
+                </span>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-brand-dark tracking-tight font-rounded leading-tight">
+                  啟夢教育｜國際留遊學
+                </h1>
+                <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-brand-orange font-rounded">
+                  從台灣出發，走向世界，開啟孩子無限可能
+                </h2>
+              </div>
+              <div className="h-[2px] bg-brand-dark/10 max-w-md mx-auto" />
+              <div className="space-y-4 text-sm sm:text-base text-brand-dark font-bold leading-relaxed text-left sm:text-center max-w-3xl mx-auto">
+                <p className="bg-white/70 p-4 sm:p-5 rounded-2xl border-2 border-brand-dark shadow-[4px_4px_0px_0px_#0E2356] transition-transform hover:-translate-y-0.5">
+                  每個孩子，都擁有屬於自己的夢想。 有人夢想成為醫師、工程師、設計師；有人希望站上世界舞台，探索不同的文化、結交來自世界朋友的各地。
+                </p>
+                <p className="bg-brand-yellow/15 p-4 sm:p-5 rounded-2xl border-2 border-brand-dark shadow-[4px_4px_0px_0px_#0E2356] text-brand-dark font-black transition-transform hover:-translate-y-0.5 border-dashed">
+                  ✨ 啟夢教育相信，教育不只是學習知識，更陪伴孩子找到方向、建立自信，培養迎接世界的能力。
+                </p>
+              </div>
             </div>
           </div>
 
@@ -334,25 +347,103 @@ export default function CategoryPage({ favorites, onFavoriteToggle }: CategoryPa
             </div>
           </div>
 
-          {/* Clean Minimal LINE Consultation Bar */}
-          <div className="bg-white rounded-3xl border border-neutral-200/80 p-8 shadow-sm flex flex-col md:flex-row items-center gap-6 justify-between max-w-4xl mx-auto mt-12">
-            <div className="flex gap-4 items-center text-left">
-              <div className="w-12 h-12 rounded-2xl bg-neutral-100 flex items-center justify-center text-2xl shrink-0">
-                📷
+          {/* Detailed Content: Philosophy & Parents Letter */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto mt-6">
+            {/* Educational Philosophy Card */}
+            <div className="bg-[#FCF8F2] rounded-3xl border-2 border-brand-dark p-6 sm:p-8 shadow-[6px_6px_0px_0px_#0E2356] space-y-4 flex flex-col justify-between transition-transform hover:-translate-y-0.5">
+              <div className="space-y-4">
+                <div className="flex items-center gap-2">
+                  <div className="p-2.5 bg-brand-orange/10 border-2 border-brand-orange text-brand-orange rounded-2xl">
+                    <Compass className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-black text-brand-dark font-rounded">
+                    教育理念
+                  </h3>
+                </div>
+                <div className="h-[2px] bg-brand-dark/10" />
+                <p className="text-brand-orange text-sm sm:text-base font-black leading-relaxed">
+                  💡 我們期盼孩子勇敢逐夢，讓教育跨越國界。
+                </p>
+                <div className="space-y-3 text-xs sm:text-sm text-brand-dark font-bold leading-relaxed">
+                  <p className="bg-white/80 p-3 rounded-xl border border-brand-dark/20">
+                    🔸 教育給予孩子的是知識、能力與品格；國際視野帶來的是格局、思考和更多人生的可能。
+                  </p>
+                  <p className="bg-white/80 p-3 rounded-xl border border-brand-dark/20">
+                    🔸 能夠改變現在的知識，而國際視野，將決定孩子未來能站高、走遠。
+                  </p>
+                  <p className="bg-white/80 p-3 rounded-xl border border-brand-dark/20">
+                    🔸 兩者相輔相成，才能培養真正具備世界競爭力的新一代人才。
+                  </p>
+                </div>
               </div>
-              <div className="space-y-1">
-                <h4 className="font-bold text-neutral-800 text-base sm:text-lg">期待孩子成為下一張精彩照片的主角嗎？</h4>
-                <p className="text-neutral-500 text-xs sm:text-sm font-medium">歡迎與啟夢教育官方 LINE 客服諮詢，為您提供專屬的一對一課程顧問諮詢！</p>
+              <div className="pt-2">
+                <p className="text-xs sm:text-sm text-brand-dark font-black bg-brand-yellow/10 p-3 rounded-xl border border-dashed border-brand-orange">
+                  ✨ 這也是啟夢教育一路以來始終堅持的信念：教育改變人生，國際視野成就未來。
+                </p>
               </div>
             </div>
-            <a
-              href={lineUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="shrink-0 w-full md:w-auto px-6 py-3 rounded-full bg-line-green hover:bg-line-green-hover text-white text-sm font-bold text-center transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer shadow-sm hover:shadow active:scale-98"
-            >
-              💬 LINE 專人預約諮詢
-            </a>
+
+            {/* Letter to Parents Card */}
+            <div className="bg-white rounded-3xl border-2 border-brand-dark p-6 sm:p-8 shadow-[6px_6px_0px_0px_#0E2356] space-y-4 flex flex-col justify-between transition-transform hover:-translate-y-0.5">
+              <div className="space-y-4">
+                <div className="flex items-center gap-2">
+                  <div className="p-2.5 bg-brand-yellow/30 border-2 border-brand-dark text-brand-dark rounded-2xl">
+                    <Heart className="w-6 h-6 fill-brand-orange text-brand-dark" />
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-black text-brand-dark font-rounded">
+                    給家長的私人話
+                  </h3>
+                </div>
+                <div className="h-[2px] bg-brand-dark/10" />
+                <p className="text-brand-dark/80 text-sm sm:text-base font-bold leading-relaxed">
+                  最後家長都希望給孩子最好的教育。而最好的教育，不只是課本的成績，更要讓孩子擁有選擇人生的能力。
+                </p>
+                <p className="text-brand-muted text-xs sm:text-sm font-bold leading-relaxed">
+                  啟夢教育希望成為每個家庭最值得信賴的教育夥伴，陪伴孩子一路成長，從探索興趣、規劃學習，走向國際舞台，共同見證每一次蛻變與成長。
+                </p>
+              </div>
+              <div className="pt-2 flex items-center gap-2.5 text-xs text-brand-orange font-black">
+                <Smile className="w-5 h-5" />
+                <span>專業陪伴 ． 用心灌溉每一顆種子</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Closing Footer Brand Banner */}
+          <div className="bg-brand-dark text-white rounded-3xl border-2 border-brand-dark p-6 sm:p-10 shadow-[6px_6px_0px_0px_#E28743] text-center space-y-6 max-w-4xl mx-auto mt-10 relative overflow-hidden">
+            <div className="absolute top-0 right-0 transform translate-x-12 -translate-y-12 opacity-5 pointer-events-none">
+              <Globe className="w-48 h-48 text-brand-orange" />
+            </div>
+            
+            <div className="space-y-2 relative z-10">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-brand-orange text-white border-2 border-white rounded-full text-xs font-black font-rounded">
+                🌱 夢想無國界
+              </span>
+              <h3 className="text-xl sm:text-2xl font-black font-rounded text-brand-yellow">
+                啟夢教育｜夢想無國界
+              </h3>
+            </div>
+
+            <div className="h-[1px] bg-white/20 max-w-md mx-auto" />
+
+            <div className="space-y-4 text-xs sm:text-sm font-bold leading-relaxed text-center text-white/90 max-w-2xl mx-auto">
+              <p className="text-base sm:text-lg font-black text-brand-orange font-rounded">
+                讓孩子勇敢逐夢，讓教育跨越國界。
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-lg mx-auto text-left font-rounded mt-2">
+                <div className="bg-white/5 border border-white/15 p-3 rounded-xl flex items-center gap-2">
+                  <span className="text-brand-yellow text-lg">🎓</span>
+                  <span className="text-xs">教育塑造能力，國際視野創造機會。</span>
+                </div>
+                <div className="bg-white/5 border border-white/15 p-3 rounded-xl flex items-center gap-2">
+                  <span className="text-brand-orange text-lg">🚀</span>
+                  <span className="text-xs">教育改變人生，實現未來國際視野。</span>
+                </div>
+              </div>
+              <p className="text-xs sm:text-sm text-brand-yellow font-medium pt-2">
+                從台灣出發，與世界同行，讓每個孩子都有面向全球、迎向未來的無限可能。
+              </p>
+            </div>
           </div>
 
 
