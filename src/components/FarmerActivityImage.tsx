@@ -1,6 +1,6 @@
 import React from 'react';
 // @ts-expect-error - Vite handles png asset resolution dynamically
-import farmerImage from '../assets/images/regenerated_image_1784470844781.png';
+import farmerImage from '../assets/images/regenerated_image_1784624174332.jpg';
 
 interface FarmerActivityImageProps {
   className?: string;

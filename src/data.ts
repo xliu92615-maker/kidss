@@ -1,6 +1,6 @@
 import { Activity, Testimonial, FAQItem } from './types';
-// @ts-expect-error - Vite handles jpg asset resolution dynamically
-import pawPatrolImage from './assets/images/regenerated_image_1784370641868.jpg';
+// @ts-expect-error - Vite handles png asset resolution dynamically
+import pawPatrolImage from './assets/images/regenerated_image_1784626339310.png';
 // @ts-expect-error - Vite handles jpg asset resolution dynamically
 import bungeeImage from './assets/images/regenerated_image_1784546159951.jpg';
 // @ts-expect-error - Vite handles png asset resolution dynamically
@@ -15,6 +15,21 @@ import bakingImage from './assets/images/regenerated_image_1784378399919.jpg';
 import vetImage from './assets/images/regenerated_image_1784379342558.jpg';
 // @ts-expect-error - Vite handles jpg asset resolution dynamically
 import creativeArtImage from './assets/images/regenerated_image_1784451946363.jpg';
+
+// @ts-expect-error - Vite handles jpg asset resolution dynamically
+import blueyImage from './assets/images/regenerated_image_1784623237664.jpg';
+
+// @ts-expect-error - Vite handles png asset resolution dynamically
+import safetyHeroImage from './assets/images/regenerated_image_1784624171638.png';
+
+// @ts-expect-error - Vite handles jpg asset resolution dynamically
+import dreamMissionImage from './assets/images/dream_mission_agency_1784625118879.jpg';
+
+// @ts-expect-error - Vite handles png asset resolution dynamically
+import nightExplorationImage from './assets/images/regenerated_image_1784625672950.png';
+
+// @ts-expect-error - Vite handles png asset resolution dynamically
+import dreamMissionNewImage from './assets/images/regenerated_image_1784625675076.png';
 
 export const ACTIVITIES: Activity[] = [
   // Category: subject (主題活動)
@@ -140,7 +155,7 @@ export const ACTIVITIES: Activity[] = [
     category: 'subject',
     shortDesc: '最受歡迎的布麗來囉！親子互動、合影打卡、歡樂遊戲，陪伴寶貝快樂過暑假！',
     description: '深受小朋友喜愛的妙妙犬布麗（Bluey）見面會來囉！現場準備了精彩有趣的親子互動遊戲，讓家長與孩子一同參與，增進家庭親密情感。還有專屬的合影打卡時間，與布麗近距離接觸拍照留念，以及豐富歡樂的團體遊戲，給孩子最快樂、最溫馨的童年回憶！',
-    image: 'https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&w=800&q=80',
+    image: blueyImage,
     age: '3 - 12 歲',
     duration: '1.5 小時',
     price: 'NT$399 一大一小',
@@ -162,370 +177,6 @@ export const ACTIVITIES: Activity[] = [
     ],
     isNew: true,
     tags: ['布麗見面會', '親子互動', '合影打卡', '歡樂遊戲']
-  },
-  {
-    id: 'career-6',
-    title: '小小考古學家：恐龍化石挖掘與古生物大探險',
-    category: 'subject',
-    shortDesc: '拿著地質錘與小刷子！在仿真考古地層中敲出暴龍骨骼化石！',
-    description: '重返億萬年前的侏羅紀世界！戴上考古探險探照帽、換上卡其工裝圍裙。小朋友們將拿起專業的微型地質錘、鑿刀與清掃軟刷，在精心特製的石膏地層中親手挖掘出埋藏已久的暴龍與三角龍骨骼化石，並學習如何像真正學家一樣進行編號、測量與拼接，滿足所有恐龍迷的終極願望！',
-    image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80',
-    age: '4 - 9 歲',
-    duration: '2 小時',
-    price: 'NT$800 (含考古工裝、恐龍化石挖掘磚組、地質工具、證書)',
-    location: '全台巡迴文創園區基地',
-    fullAddress: '台北華山文創園區 / 台中審計新村基地 / 高雄駁二藝術特區',
-    date: '每週日 上午 10:30 / 下午 14:30',
-    spots: 12,
-    spotsLeft: 2,
-    learningGoals: [
-      '認識地質分層與古生物化石形成的地質學知識',
-      '鍛鍊手眼協調與耐性，體驗考古發掘的細膩步驟',
-      '學習骨骼立體結構拼裝，增強空間幾何感知',
-      '啟發對地球歷史與自然演化的敬畏與興趣'
-    ],
-    included: [
-      '考古探險家卡其背心與遮陽帽體驗',
-      '完整暴龍骨骼挖掘磚組（含迷你地質錘、鑿刀、毛刷）',
-      '挖掘完成之立體恐龍骨骼模型 (可帶回家收藏)',
-      '「侏羅紀古生物小學者」榮譽證書'
-    ],
-    isPopular: false,
-    tags: ['恐龍化石', '考古挖掘', '古生物學', '手眼協調']
-  },
-
-  // Category: manager (小小店長)
-  {
-    id: 'manager-1',
-    title: '幸福超商小小店長：歡迎光臨叮咚體驗',
-    category: 'subject',
-    shortDesc: '最受歡迎的小小店長！體驗補貨、整理排面、收銀嗶嗶刷條碼！',
-    description: '「歡迎光臨！」響亮的口號、親切的笑容。穿上經典的超商迷你制服，親自體驗店長的一天。從在貨架上補齊最愛的糖果飲料，把標籤對齊，到最令人興奮的收銀機刷條碼、收發發票、給零錢，讓孩子在遊戲中學會金錢概念、算術與待客禮貌。',
-    image: 'https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80',
-    age: '4 - 8 歲',
-    duration: '1.5 小時',
-    price: 'NT$600 (含超商小制服租借、收銀操作、小禮包、店長證書)',
-    location: '各縣市皆有舉辦 請加Line詢問預約',
-    fullAddress: '各縣市皆有舉辦 請加Line詢問預約',
-    date: '場次眾多 請加LINE詢問預約報名',
-    spots: 8,
-    spotsLeft: 2,
-    learningGoals: [
-      '大聲問好與微笑，培養生活禮貌、口語表達與人際社交技巧',
-      '分類整理排面與商品上架，訓練邏輯分類與空間整理能力',
-      '收銀操作體驗，理解買賣交易與簡單的加減算術金錢概念',
-      '建立工作責任心，體驗各行各業服務人員的辛苦與貢獻'
-    ],
-    included: [
-      '超萌客製小小超商制服租借 (拍照效果極佳)',
-      '實體收銀機嗶嗶刷條碼與找零體驗',
-      '兒童快樂店長專屬零食與貼紙驚喜小禮包',
-      '小小超商店長拍立得拍貼與彩色證書'
-    ],
-    isPopular: true,
-    tags: ['人氣王', '收銀嗶嗶', '金錢概念', '服務禮儀']
-  },
-  {
-    id: 'manager-2',
-    title: '義式披薩大師：窯烤披薩店小店長',
-    category: 'subject',
-    shortDesc: '迎接客人、親手擀麵皮、鋪滿厚厚起司，最後送進窯烤爐！',
-    description: '當香噴噴的披薩出爐，正是小店長的驕傲時刻！穿上經典的紅綠義式圍裙，首先學習如何站在門口熱情招呼客人，接著化身主廚在烘焙區親手揉擀麵團，挑選自己最愛的配料（鳳梨、火腿、花椰菜、多重起司），最後由主廚協助送入專業窯烤。還能體驗為自己親手做的披薩進行切片、裝盒與收銀結帳！',
-    image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80',
-    age: '3 - 10 歲',
-    duration: '2 小時',
-    price: 'NT$599 (含9吋自製披薩、精美圍裙、飲料、收銀體驗與證書)',
-    location: '各縣市皆有舉辦 請加Line詢問預約',
-    fullAddress: '各縣市皆有舉辦 請加Line詢問預約',
-    date: '場次眾多 請加LINE詢問預約報名',
-    spots: 10,
-    spotsLeft: 4,
-    learningGoals: [
-      '食物手作與觸覺感官統合開發，探索多種食材觸感',
-      '理解餐飲服務業「前台帶位招呼」與「後台製作」的流程',
-      '時間觀念建立：計時披薩窯烤的黃金3分鐘',
-      '享用自己努力付出製作而成的美味食物，培養珍惜食物不浪費的觀念'
-    ],
-    included: [
-      '自選雙拼配料9吋窯烤手工披薩一個 (現場享用或外帶)',
-      '窯烤店長精緻棉質圍裙、廚師高帽一組',
-      '無限暢飲水果茶或鮮乳一杯',
-      '小小義式店長認證章與紀念證書'
-    ],
-    isPopular: false,
-    tags: ['手作披薩', '美味好吃', '帶位禮儀', '圍裙高帽']
-  },
-  {
-    id: 'manager-3',
-    title: '誠品風書店小小圖書管理員',
-    category: 'subject',
-    shortDesc: '在充滿書香的空間中，學習書籍分類、櫃檯借還書與溫馨說故事！',
-    description: '給喜愛閱讀、熱愛分享的寶貝！來到美感洋溢的獨立書房，換上小小館員綠色圍裙。學習圖書條碼分類法，幫不小心迷路的書寶寶回到溫暖的家；接著在櫃檯學習使用掃描槍，幫大小讀者辦理借書與還書。最後還會挑選一本最愛的繪本，在小舞台上分享給家長與小夥伴，大大增強自信心！',
-    image: 'https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?auto=format&fit=crop&w=800&q=80',
-    age: '5 - 11 歲',
-    duration: '2 小時',
-    price: 'NT$650 (含文青圍裙、客製化兒童繪本一本、點心、證書)',
-    location: '各縣市皆有舉辦 請加Line詢問預約',
-    fullAddress: '各縣市皆有舉辦 請加Line詢問預約',
-    date: '場次眾多 請加LINE詢問預約報名',
-    spots: 8,
-    spotsLeft: 2,
-    learningGoals: [
-      '引導與培養對書籍的熱愛，提升閱讀動機與樂趣',
-      '學會十進位或圖形符號分類書籍，鍛鍊視覺辨識與逻辑思維',
-      '練習面對人群朗讀、說故事，突破內向，展現卓越表達力',
-      '學習安靜與尊重他人的公共空間禮儀'
-    ],
-    included: [
-      '文青風小小館員棉麻圍裙體驗與拍照留念',
-      '精選優質兒童硬頁繪本或故事書一本 (自由挑選，價值$350)',
-      '圖書館借書掃描槍系統實機演練',
-      '「文青小館長」精裝榮譽證書與紀念磁鐵'
-    ],
-    isNew: true,
-    tags: ['書香閱讀', '自信表達', '圖書分類', '安靜美學']
-  },
-  {
-    id: 'manager-4',
-    title: '人氣速食店小小店長：手作脆薯與漢堡吧台嗶嗶點餐',
-    category: 'subject',
-    shortDesc: '穿上速食店經典紅黃迷你制服！親手撒鹽搖薯條、擠醬汁做漢堡！',
-    description: '香噴噴的黃金脆薯來囉！孩子們最喜愛的速食店長體驗盛大開跑。換上經典鮮明的迷你速食店長制服，進入潔淨安全的觀摩廚房，學習如何幫剛出爐的薯條撒鹽與搖動均勻，並親自為特製漢堡擠上美味醬汁；最後坐上點餐櫃檯，為爸爸媽媽嗶嗶點餐收銀，享受滿滿成就感！',
-    image: 'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80',
-    age: '3 - 8 歲',
-    duration: '1.5 小時',
-    price: 'NT$550 (含專屬圍裙制服體驗、手作親子漢堡薯條套餐一份、小禮物)',
-    location: '各縣市指定門市專場 請加LINE預約',
-    fullAddress: '全台各大合作門市門點（報名成功後發送通知確認信）',
-    date: '每週六、日 下午場次',
-    spots: 10,
-    spotsLeft: 4,
-    learningGoals: [
-      '學習基礎食材衛生概念與廚房手部清潔禮儀',
-      '練習面對顧客微笑應對，建立人際溝通自信心',
-      '體驗餐飲服務業分工流程，珍惜每一份桌上餐點',
-      '算術與金錢交易實務演練'
-    ],
-    included: [
-      '經典速食店長專屬紅黃制服與帽子體驗',
-      '親手製作之現作漢堡與黃金脆薯套餐一份',
-      '點餐收銀機實作體驗照片一組',
-      '「活力歡樂小店長」專屬結業證書'
-    ],
-    isPopular: true,
-    tags: ['速食店長', '手作漢堡', '收銀點餐', '親子美食']
-  },
-  {
-    id: 'manager-5',
-    title: '網紅人氣茶飲店小小調飲師：手搖珍珠奶茶大解密',
-    category: 'subject',
-    shortDesc: '量秤茶湯、手搖冰塊與Q彈珍珠！客製化專屬爸媽的完美甜度冰塊！',
-    description: '台灣之光珍珠奶茶是怎麼變出來的？寶貝化身最潮的人氣手搖飲店長！繫上品牌休閒帆布圍裙，認識不同茶葉的迷人香氣。學習使用量杯精準測量比例，把軟Q黑糖珍珠舀入杯中，最後手拿搖飲杯大展身手「Shake Shake！」搖出綿密泡沫，客製化一杯給家長的感恩手搖飲。',
-    image: 'https://images.unsplash.com/photo-1558857563-b371033873b8?auto=format&fit=crop&w=800&q=80',
-    age: '4 - 10 歲',
-    duration: '1.5 小時',
-    price: 'NT$600 (含調飲師制服、自製珍珠奶茶2杯、專屬環保杯套)',
-    location: '全台特約人氣手搖飲門市',
-    fullAddress: '台北 / 新竹 / 台中 / 台南 合作門市據點',
-    date: '每週六 下午 14:00 / 16:00',
-    spots: 8,
-    spotsLeft: 1,
-    learningGoals: [
-      '學習液體容量單位（毫升）與刻度量杯的精準測量',
-      '鍛鍊手臂肌肉協調與節奏感（手搖動作）',
-      '理解客製化點餐禮儀（詢問甜度、冰塊並正確紀錄）',
-      '認識茶葉文化與食品安全基礎衛生觀念'
-    ],
-    included: [
-      '品牌潮流調飲師圍裙與工作帽現場著裝',
-      '親手調製大杯人氣珍珠奶茶與水果茶各一杯',
-      '專屬客製化帆布飲料環保提袋一個',
-      '「金牌小小調飲師」紀念證書'
-    ],
-    isNew: true,
-    tags: ['珍珠奶茶', '手搖調飲', '容量學習', '台灣文化']
-  },
-  {
-    id: 'manager-6',
-    title: '夢幻浪漫花店小小花藝店長：盆栽設計與禮盒包裝',
-    category: 'subject',
-    shortDesc: '認識季節鮮花與多肉植物！親手修剪枝葉、搭配色彩與打緞帶花結！',
-    description: '走進香氣四溢、綠意盎然的夢幻花坊，換上法式莫蘭迪色系園藝圍裙。小小店長們將學習識別玫瑰、洋桔梗、尤加利葉等季節花材；練習安全的修剪技巧，依照美學比例將鮮花插入精美禮盒中。接著學習為來訪的客人推薦花語，並親手繫上優雅的絲絨緞帶，體驗最療癒的日常。',
-    image: 'https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=800&q=80',
-    age: '5 - 12 歲',
-    duration: '2 小時',
-    price: 'NT$750 (含花藝圍裙體驗、當季鮮花禮盒一份、精美包裝、茶點)',
-    location: '北中南合作美學花藝工作室',
-    fullAddress: '台北民生社區 / 台中美術園道 / 高雄美術館區特約工作室',
-    date: '每週日 下午 13:30 - 15:30',
-    spots: 6,
-    spotsLeft: 2,
-    learningGoals: [
-      '培養色彩美學搭配與自然幾何對稱的高雅品味',
-      '認識植物生命週期與照顧盆栽的日常知識',
-      '練習精細手部動作（修剪花莖、纏繞花藝鐵絲與打結）',
-      '學習花店待客禮儀與送禮心意表達'
-    ],
-    included: [
-      '法式莫蘭迪園藝圍裙與手套著裝體驗',
-      '當季進口與在地鮮花素材與精裝方盒一組',
-      '親手設計之鮮花禮盒帶回家增添居家美感',
-      '「首席小花藝師」美學認證證書'
-    ],
-    isPopular: false,
-    tags: ['花店店長', '花藝美學', '鮮花包裝', '氣質療癒']
-  },
-
-  // Category: activity (親子活動)
-  {
-    id: 'activity-1',
-    title: '山林探險家：夜間昆蟲與昆蟲生態探索',
-    category: 'subject',
-    shortDesc: '戴上頭燈、拿起放大鏡，跟著生態專家尋找甲蟲、獨角仙與螢火蟲！',
-    description: '大自然是最棒的教室！由專業生態講師引導，在安全的生態園區中進行微距探索。認識鍬形蟲、獨角仙、竹節蟲的天然棲地與夜間習性。戴上頭燈在微風徐徐的夜晚，看著發光的螢火蟲如繁星般閃爍，聽著蛙鳴，感受自然生命的奧妙與生態保育的重要性。',
-    image: 'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80',
-    age: '4 - 12 歲 (全家參與，1大1小同行)',
-    duration: '3 小時',
-    price: 'NT$1,200 (1大1小同行價，含專業導覽、防蚊防護、觀察工具、茶點)',
-    location: '各縣市皆有舉辦 請加Line詢問預約',
-    fullAddress: '各縣市皆有舉辦 請加Line詢問預約',
-    date: '場次眾多 請加LINE詢問預約報名',
-    spots: 20,
-    spotsLeft: 6,
-    learningGoals: [
-      '引發對自然科學與生態環境的強烈好奇與熱愛',
-      '學會如何安全、溫和地觀察與接觸昆蟲，不破壞生態',
-      '五感感官體驗：靜心聆聽夜間山林、觀察昆蟲保護色與夜光',
-      '增進親子在戶外活動中的相互扶持與親密感'
-    ],
-    included: [
-      '專業生態講師全程深度雙導覽與安全戒護',
-      '專業昆蟲觀察盒、放大鏡、安全頭燈現場租借',
-      '野餐式山林茶點與熱茶飲 (提供溫暖陪伴)',
-      '親子山林探險小徽章與生態筆記本'
-    ],
-    isPopular: true,
-    tags: ['夜間探索', '生態科普', '陽明山', '甲蟲昆蟲']
-  },
-  {
-    id: 'activity-2',
-    title: '公主夢成真！專業兒童彩妝體驗、夢幻造型',
-    category: 'subject',
-    shortDesc: '前20位報名贈 Shushu & Sassy冰雪奇緣聯名款彩妝乙組！',
-    description: '孩子的童年只有一次，讓我們一起陪伴她，完成一次屬於自己的公主夢✨ 前20位報名即贈送 Shushu & Sassy 冰雪奇緣聯名款彩妝乙組！名額有限，額滿為止。專業兒童彩妝體驗與夢幻公主造型，讓寶貝實現心中的美麗童話。',
-    image: creativeArtImage,
-    age: '3 - 12 歲',
-    duration: '2 小時',
-    price: 'NT$450 (含限定奢華彩妝組、公主禮服租借、一對一美甲美髮造型、沙龍攝影與大相框)',
-    location: '各縣市皆有舉辦 請加Line詢問預約',
-    fullAddress: '各縣市精選星級飯店、美學特約空間 (請加LINE確認最新預訂名額)',
-    date: '場次眾多 請加LINE詢問預約報名',
-    spots: 20,
-    spotsLeft: 6,
-    learningGoals: [
-      '圓滿公主夢想，提升個人美感素養與自我認同',
-      '體驗無毒安全的兒童專用彩妝與專業美甲設計',
-      '自信展現自我，在舞台或合影中大方展露笑容',
-      '增進親子情感，共同記錄童年最夢幻耀眼的瞬間'
-    ],
-    included: [
-      'Shushu & Sassy 冰雪奇緣聯名款彩妝組乙份 (限定前20位)',
-      '專業無毒彩妝、夢幻造型與精緻公主禮服現場體驗',
-      '一對一造型師量身打造公主妝容與精緻美甲服務',
-      '專屬夢幻場景精緻拍照留念與數位電子照片提供'
-    ],
-    isNew: true,
-    tags: ['公主夢成真', '彩妝體驗', '無毒彩妝', '夢幻造型']
-  },
-  {
-    id: 'activity-3',
-    title: '親子星空野外求生派對：搭帳篷、營火與窯烤地瓜',
-    category: 'subject',
-    shortDesc: '全家出動！學習野外方位辨識、親手生火與烤出香噴噴地瓜！',
-    description: '走出冷氣房，全家一起享受最野趣的星空同樂會！由戶外童軍教官指導，親子通力合作搭起印第安帳篷；學習無痕山林（LNT）原則與指南針方位判讀。傍晚升起溫暖的營火，全家一起用泥土包覆地瓜進行傳統窯烤，圍著營火唱歌說故事，享受無手機干擾的純粹親子時光。',
-    image: 'https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=800&q=80',
-    age: '4 歲以上親子同樂',
-    duration: '3.5 小時 (半日星空營火派對)',
-    price: 'NT$1,200 (一大一小親子價，含窯烤食材、帳篷設備使用、教官指導費)',
-    location: '新北市陽明山 / 台中郊野露營場地',
-    fullAddress: '新北市淡水區陽明山腳園區 / 台中新社區露營秘境',
-    date: '每週六 下午 15:30 - 19:00',
-    spots: 15,
-    spotsLeft: 5,
-    learningGoals: [
-      '增進親子分工協調，透過共同搭帳篷與生火建立緊密默契',
-      '掌握基礎野外辨識方位與求生安全常識',
-      '體驗傳統農村窯烤野炊樂趣，珍惜戶外自然資源',
-      '遠離3C屏幕，在大自然中釋放身心壓力'
-    ],
-    included: [
-      '全套印第安帳篷與戶外露營野炊設備現場使用',
-      '無毒黃金地瓜、棉花糖與有機野炊食材包',
-      '星空營火音樂派對與專業攝影師隨行側拍紀錄',
-      '親子戶外探索徽章一對'
-    ],
-    isPopular: true,
-    tags: ['親子露營', '野外求生', '營火派對', '無痕山林']
-  },
-  {
-    id: 'activity-4',
-    title: '親子水上歡樂行：平靜水域獨木舟與親子SUP體驗',
-    category: 'subject',
-    shortDesc: '穿上專屬救生衣！在教練戒護下與寶貝同划一條獨木舟，飽覽湖光山色！',
-    description: '專為親子設計的安全水上輕冒險！選在水流絕對平靜的國家級合格水域，由擁有紅十字會與體育署認證的專業水上救生教練全程1比4戒護。穿上符合體重的特製兒童救生衣，爸媽與寶貝同乘一艘雙人獨木舟或大型寬版親子SUP，同心協力划槳前進，享受親水涼爽快感與無敵湖景。',
-    image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80',
-    age: '5 - 12 歲親子同划',
-    duration: '2.5 小時',
-    price: 'NT$1,600 (一大一小雙人板船價，含全套安全裝備、教練戒護、保險)',
-    location: '新店碧潭合格水域 / 日月潭平靜月牙灣',
-    fullAddress: '新北市新店區碧潭東岸碼頭 / 南投縣魚池鄉日月潭月牙灣基地',
-    date: '每週六、日 上午 09:00 / 下午 14:30',
-    spots: 10,
-    spotsLeft: 3,
-    learningGoals: [
-      '克服親水恐懼，掌握正確水上漂浮與自救安全知識',
-      '鍛鍊核心平衡感與雙臂划槳全身協調肌力',
-      '建立親子「同舟共濟」的絕佳溝通與前進默契',
-      '學習水域生態保護與水上禮儀'
-    ],
-    included: [
-      '國際標準檢驗合格兒童與成人專屬浮力救生衣',
-      '頂級穩定型雙人獨木舟 / 親子專用寬版SUP板體與槳',
-      '水上活動專案最高額意外責任保險',
-      'GoPro運動相機全程水上精彩特寫拍照贈送'
-    ],
-    isNew: true,
-    tags: ['水上活動', '獨木舟', '親子SUP', '核心協調']
-  },
-  {
-    id: 'activity-5',
-    title: '巨型夢幻氣墊城堡親子運動會：闖關與體能大挑戰',
-    category: 'subject',
-    shortDesc: '佔地百坪氣墊樂園！瘋狂彈跳、巨型滑梯與親子障礙賽大PK！',
-    description: '把歡笑聲開到最大！全台首創佔地超過兩百坪的室內外巨型氣墊障礙城堡運動會來了。特設「親子兩人三腳障礙關卡」、「高空彈跳求生滑梯」與「彩虹球池大尋寶」。全場地採用醫療級無毒彈力防護氣墊，由活潑的主持人帶領全場爸媽與寶貝分組對抗，釋放孩子永遠用不完的電力！',
-    image: 'https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=800&q=80',
-    age: '2 - 10 歲分區闖關',
-    duration: '2 小時 (暢玩闖關含中場補充水分休息)',
-    price: 'NT$700 (一大一小入場暢玩票，附贈能量運動飲料與涼感巾)',
-    location: '台北市區大型體育館 / 台中市展覽館專場',
-    fullAddress: '台北圓山花博爭艷館廣場 / 台中國際展覽中心特區',
-    date: '國定假日與週末限定舉辦',
-    spots: 25,
-    spotsLeft: 8,
-    learningGoals: [
-      '促進兒童前庭覺與本體覺發展（彈跳與平衡運動）',
-      '增強心肺功能與大肌肉爆發力',
-      '培養運動家的良性競爭勝負心與團隊榮譽感',
-      '創造親子無間隔歡笑共動記憶'
-    ],
-    included: [
-      '巨型安全氣墊城堡全區兩小時不限次數闖關手環',
-      '親子專屬透氣排汗涼感運動毛巾一對',
-      '中場能量補給站（現切當季鮮甜水果與補水飲品）',
-      '「活力小神童」闖關紀念獎牌一面'
-    ],
-    isPopular: false,
-    tags: ['氣墊城堡', '體能極限', '親子障礙賽', '放電必備']
   },
 
   // Category: travel (親子旅遊資訊)
@@ -592,33 +243,32 @@ export const ACTIVITIES: Activity[] = [
   },
   {
     id: 'travel-3',
-    title: '【科學實驗】小小愛迪生：氣壓水火箭與神奇史萊姆化學課',
+    title: '職安小英雄【最接地氣的感恩教育】',
     category: 'colearning',
-    shortDesc: '將生硬的科學原理化為驚嘆魔術！親手調配變色史萊姆、發射衝天火箭！',
-    description: '將生硬的科學原理化為驚嘆連連的奇幻魔術！由知名科普團隊設計，帶領孩子親手調配能拉長、會發光的「感溫變色史萊姆」，認識非牛頓流體與高分子聚合物；隨後前往安全草坪，利用氣壓與作用力原理，親子合作組裝、加壓並發射「高空衝天水火箭」，讓孩子在驚呼中愛上科學！',
-    image: 'https://images.unsplash.com/photo-1530026405186-ed1ea0ac7a63?auto=format&fit=crop&w=800&q=80',
+    shortDesc: '今年最觸動人心的親子職業體驗！戴上工程帽，體會辛苦，理解責任。',
+    description: '體會辛苦：戴上工程帽、手拿工具，明白上班需要付出汗水。\n理解責任：知道安全是為了「平安回家陪你」，理解父母的叮嚀。\n建立崇拜：發現爸爸媽媽在社會上，是默默守護大家安全的無名英雄。\n今年最觸動人心的親子職業體驗。',
+    image: safetyHeroImage,
     age: '4 - 12 歲及家長',
     duration: '2 小時',
-    price: 'NT$399 (含DIY史萊姆材料包、個人衝天水火箭組、天文探索手冊)',
+    price: 'NT$299 一大一小',
     location: '各縣市皆有舉辦 請加Line詢問預約',
-    fullAddress: '各縣市精選文創園區戶外廣場與多功能科學教室 (請加LINE預訂)',
+    fullAddress: '各縣市皆有舉辦 請加Line詢問預約',
     date: '場次眾多 請加LINE詢問預約報名',
     spots: 15,
     spotsLeft: 5,
     learningGoals: [
-      '透過親手調配史萊姆，理解非牛頓流體與黏彈性的化學常識',
-      '手作高空衝天水火箭，實踐並觀察作用力與反作用力物理原理',
-      '鍛鍊手腦並用的實踐力，學會大膽假設、動手驗證的科學家思維',
-      '學習團隊科學任務中的合作與溝通技巧，提升自信與探索精神'
+      '體會辛苦：明白上班需要付出汗水',
+      '理解責任：理解父母的叮嚀與安全的意義',
+      '建立崇拜：認識社會上的無名英雄',
+      '培養對各行各業的感恩與尊重'
     ],
     included: [
-      'DIY炫彩感溫變色史萊姆材料包一組 (可帶回家繼續遊玩)',
-      '親子專屬高空衝天水火箭全套裝備一組 (含氣壓發射台)',
-      '小小科學家白袍體驗、防護眼鏡現場配戴與天文探索手冊',
-      '愛迪生科學大師認證勳章與科學營結業證書'
+      '小職人專屬工程帽及安全背心體驗',
+      '職安小英雄結業證書',
+      '親子職業探索闖關手冊'
     ],
     isPopular: true,
-    tags: ['科學實驗', '化學手作', '水火箭發射', '邏輯思考']
+    tags: ['職業體驗', '感恩教育', '親子共學']
   },
   {
     id: 'travel-4',
@@ -626,7 +276,7 @@ export const ACTIVITIES: Activity[] = [
     category: 'colearning',
     shortDesc: '戴上安全頭燈，夜巡神祕森林！尋找獨角仙、手作微型循環生態箱！',
     description: '戴上安全頭燈，跟著專業生態講師走入夜間神祕的森林！尋找樹幹上的獨角仙、鍬形蟲與閃爍的螢火蟲。孩子將學會如何溫和、安全地親近大自然與昆蟲，不破壞生態。最後親子將利用苔蘚、蕨類與微型公仔，在密閉玻璃罐中親手組裝一個可以永續循環的「綠意微型生態苔蘚箱」帶回家！',
-    image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=80',
+    image: nightExplorationImage,
     age: '4 - 12 歲及家長',
     duration: '2.5 小時',
     price: 'NT$450 (含微型玻璃生態箱材料、生態頭燈租借、昆蟲放大鏡與專業導覽)',
@@ -652,33 +302,31 @@ export const ACTIVITIES: Activity[] = [
   },
   {
     id: 'travel-5',
-    title: '【創意美學】土耳其馬賽克手作燈：親子色彩美學拼貼 party',
+    title: '夢境任務局 Dream Mission Agency',
     category: 'colearning',
-    shortDesc: '拼貼五彩斑斕的手工琉璃，親手點亮一盞散發七彩夢幻光芒的暖燈！',
-    description: '一場視覺與美感融合的土耳其文化盛宴！在舒緩的音樂與香氛中，親子挑選由土耳其空運來台的各色手工琉璃、彩色珠飾。造型導師將一對一引導，帶領孩子學習幾何對稱、色彩漸層與冷暖調搭配，親手將五彩斑斕的彩色玻璃片貼上燈罩。當夜幕低垂，點亮親手製作的手作燈，散發出的七彩夢幻光芒將溫暖點亮孩子的臥室！',
-    image: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80',
-    age: '4 - 15 歲及家長',
+    shortDesc: '全台首創沉浸式兒童冒險體驗！別再讓他們的週末只剩下平板和電視！',
+    description: '全台首創沉浸式兒童冒險體驗\n別再讓他們的週末只剩下平板和電視！\n✔️沉浸式劇情體驗\n✔️專屬夢境守護者勳章與證書\n🌙 名額有限，採預約報名制，額滿即停止受理：\n\n讓孩子在遊戲中學習合作、勇敢挑戰、解決問題，也讓爸爸媽媽一起成為故事中的英雄！',
+    image: dreamMissionNewImage,
+    age: '4 - 14 歲及家長',
     duration: '2.5 小時',
-    price: 'NT$450 (含土耳其手工馬賽克燈具一組、光源線材、進口彩琉璃配件、親子點心)',
+    price: 'NT$550 一大一小',
     location: '各縣市皆有舉辦 請加Line詢問預約',
-    fullAddress: '各縣市特約異國美學創作沙龍 (請加LINE預約時段)',
+    fullAddress: '各縣市皆有舉辦 請加Line詢問預約',
     date: '場次眾多 請加LINE詢問預約報名',
     spots: 8,
     spotsLeft: 2,
     learningGoals: [
-      '認識土耳其百年傳統手工藝歷史，體驗跨文化美學特色',
-      '學習基礎幾何對稱圖案拼貼，鍛鍊立體曲面視覺美感分配',
-      '透過高度專注的手工琉璃細節貼合，鍛鍊耐心與指尖微動作控制',
-      '探討色彩與光影相互穿透的物理美感，激發無限空間美感素養'
+      '讓孩子在遊戲中學習合作與團隊精神',
+      '鼓勵勇敢挑戰未知與突破自我設限',
+      '培養解決問題的能力與邏輯思考',
+      '讓爸爸媽媽一起成為故事中的英雄'
     ],
     included: [
-      '土耳其空運進口手工馬賽克燈底座與耐高溫玻璃燈罩一組 (含台灣規格電源線與專用LED光源)',
-      '各色進口碎琉璃片、彩色珠飾、手工拼貼專用環保黏劑現場無限量使用',
-      '專業美學引導導師一對一精緻教學指導與土耳其歷史導讀',
-      '親子精美法式午茶茶點與小西餅家庭享用組'
+      '沉浸式劇情體驗',
+      '專屬夢境守護者勳章與證書'
     ],
     isPopular: true,
-    tags: ['土耳其燈', '色彩渐層', '曲面拼貼', '美感培養']
+    tags: ['沉浸式體驗', '兒童冒險', '夢境任務', '親子合作']
   },
   {
     id: 'travel-6',
