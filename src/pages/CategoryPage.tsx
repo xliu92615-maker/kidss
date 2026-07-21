@@ -559,70 +559,64 @@ export default function CategoryPage({ favorites, onFavoriteToggle }: CategoryPa
               返回首頁
             </Link>
           </div>
-
-          <div className="bg-white rounded-2xl border-2 border-brand-dark p-6 sm:p-8 shadow-[4px_4px_0px_0px_#2D3436]">
-            <div className="flex items-center gap-2 text-brand-orange font-black text-xs uppercase font-rounded mb-1">
-              <span>BRAND AND VISION</span>
-            </div>
-            <h1 className="text-2xl sm:text-3xl font-black text-brand-dark font-rounded flex items-center gap-2">
-              團隊介紹與理念
-            </h1>
-            <p className="text-xs sm:text-sm text-brand-muted mt-1 font-bold">
-              啟夢教育專業團隊介紹，我們深信：在體驗中學習、在快樂中成長！
-            </p>
-          </div>
         </div>
 
-        {/* Philosophy Section */}
-        <div className="space-y-6">
-          <div className="text-center">
-            <h2 className="text-xl sm:text-2xl font-black text-brand-dark font-rounded uppercase tracking-wider flex items-center justify-center gap-2">
-              <Sparkles className="w-6 h-6 text-brand-orange animate-pulse" />
-              四大核心教育理念
+        {/* Brand Story Section */}
+        <div className="bg-white rounded-3xl border-2 border-brand-dark overflow-hidden shadow-[4px_4px_0px_0px_#2D3436] p-6 sm:p-10 space-y-8">
+          <div className="text-center space-y-4 max-w-4xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl font-black text-brand-dark font-rounded">
+              關於啟夢教育｜以教育為根，以愛為名
             </h2>
-            <p className="text-xs sm:text-sm text-brand-muted font-bold mt-1">
-              我們堅持以最高規格的內容與安全防護，陪伴每個孩子的成長道路
+            <div className="w-12 h-1 bg-brand-orange mx-auto rounded-full" />
+            <p className="text-lg sm:text-xl font-bold text-brand-orange leading-relaxed">
+              教育，是改變人生的起點；視野，是開創未來的力量。
+            </p>
+            <p className="text-base sm:text-lg text-brand-dark font-black italic">
+              「我們不只是送孩子出國，而是幫他們找到自己的未來。」
+            </p>
+            <p className="text-sm sm:text-base text-brand-muted font-bold leading-relaxed">
+              啟夢教育以多元教育為核心，尊重每位學生的個性和志向，提供量身打造的職涯與學業規劃。我們陪伴孩子在探索世界的過程中，認識自我、建立自信，進而找到屬於自己的方向與抱負。
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white rounded-2xl border-2 border-brand-dark p-6 shadow-[3px_3px_0px_0px_#2D3436] space-y-3">
-              <div className="w-12 h-12 rounded-xl bg-brand-orange/10 border-2 border-brand-dark flex items-center justify-center">
-                <Compass className="w-6 h-6 text-brand-orange" />
-              </div>
-              <h3 className="text-base font-black text-brand-dark font-rounded">1. 體驗式學習</h3>
-              <p className="text-xs text-brand-muted font-bold leading-relaxed">
-                擺脫傳統書本死記硬背！讓孩子在做中學、學中玩，建立具體生活認知，啟發邏輯思維與理解力。
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            <div className="bg-brand-bg rounded-2xl border-2 border-brand-dark p-6 space-y-3 hover:-translate-y-1 transition-all">
+              <h3 className="text-lg font-black text-brand-dark font-rounded flex items-center gap-2">
+                <Globe className="w-5 h-5 text-brand-orange" />
+                國際留遊學｜開闊視野，接軌世界
+              </h3>
+              <p className="text-xs sm:text-sm text-brand-muted font-bold leading-relaxed">
+                國際視野不該是拿來比較的籌碼，而是面對世界變局的強大底氣。讓他們在面對未知與挑戰時不膽怯，擁有自信行走世界的從容、格局與力量。
+              </p>
+            </div>
+            
+            <div className="bg-brand-bg rounded-2xl border-2 border-brand-dark p-6 space-y-3 hover:-translate-y-1 transition-all">
+              <h3 className="text-lg font-black text-brand-dark font-rounded flex items-center gap-2">
+                <Sparkles className="w-5 h-5 text-brand-yellow-text" />
+                多元教育適性發展｜因材施教，點燃潛能
+              </h3>
+              <p className="text-xs sm:text-sm text-brand-muted font-bold leading-relaxed">
+                打破傳統單一的評量框架，我們的教育本質「點燃」而非「填滿」。透過多元適性的引導，協助孩子發掘自身的優勢與熱情，養成適應未來變局的核心素養，讓每個孩子都能在屬於自己的舞台上發光發熱。
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl border-2 border-brand-dark p-6 shadow-[3px_3px_0px_0px_#2D3436] space-y-3">
-              <div className="w-12 h-12 rounded-xl bg-[#1145BA]/10 border-2 border-brand-dark flex items-center justify-center">
-                <ShieldCheck className="w-6 h-6 text-[#1145BA]" />
-              </div>
-              <h3 className="text-base font-black text-brand-dark font-rounded">2. 100% 安全保障</h3>
-              <p className="text-xs text-brand-muted font-bold leading-relaxed">
-                所有營隊與活動皆經由官方實地安全勘查，嚴格維持1:5至1:8高師生比，並配備完整意外傷害保險。
+            <div className="bg-brand-bg rounded-2xl border-2 border-brand-dark p-6 space-y-3 hover:-translate-y-1 transition-all">
+              <h3 className="text-lg font-black text-brand-dark font-rounded flex items-center gap-2">
+                <Heart className="w-5 h-5 text-rose-500" />
+                深耕公益與社會責任｜傳遞溫暖，播下希望
+              </h3>
+              <p className="text-xs sm:text-sm text-brand-muted font-bold leading-relaxed">
+                世界需要的不是高高在上的精英，而是懂得愛的個體。啟夢教育持續將資源與關懷延伸至社會需要的角落，讓孩子在汲取知識的同時，也學會關懷生命、回饋社會，讓愛的循環生生不息。
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl border-2 border-brand-dark p-6 shadow-[3px_3px_0px_0px_#2D3436] space-y-3">
-              <div className="w-12 h-12 rounded-xl bg-brand-yellow-light text-brand-yellow-text border-2 border-brand-dark flex items-center justify-center">
-                <Award className="w-6 h-6 text-brand-yellow-text" />
-              </div>
-              <h3 className="text-base font-black text-brand-dark font-rounded">3. 啟發式引導</h3>
-              <p className="text-xs text-brand-muted font-bold leading-relaxed">
-                我們不給標準答案！以趣味問答與情境模擬，鼓勵孩子主動提出疑問、思考，並勇敢進行口語表達。
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl border-2 border-brand-dark p-6 shadow-[3px_3px_0px_0px_#2D3436] space-y-3">
-              <div className="w-12 h-12 rounded-xl bg-rose-100 border-2 border-brand-dark flex items-center justify-center">
-                <Heart className="w-6 h-6 text-rose-500" />
-              </div>
-              <h3 className="text-base font-black text-brand-dark font-rounded">4. 暖心陪伴傾聽</h3>
-              <p className="text-xs text-brand-muted font-bold leading-relaxed">
-                我們尊重每個孩子的獨特心靈與性格特質。用包容與傾聽，給予孩子最充足的正向肯定與自信能量。
+            <div className="bg-brand-bg rounded-2xl border-2 border-brand-dark p-6 space-y-3 hover:-translate-y-1 transition-all">
+              <h3 className="text-lg font-black text-brand-dark font-rounded flex items-center gap-2">
+                <Users className="w-5 h-5 text-[#1145BA]" />
+                陪伴家庭成長｜讓家庭更有底氣，讓孩子更有方向
+              </h3>
+              <p className="text-xs sm:text-sm text-brand-muted font-bold leading-relaxed">
+                教育是家庭的共同修行。我們希望賦予家庭正向連結的力量，讓家長成為孩子最堅實的後盾，讓孩子帶著滿滿的愛，勇敢飛向世界。
               </p>
             </div>
           </div>
