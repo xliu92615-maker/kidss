@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, MessageCircle, Heart } from 'lucide-react';
+import { Star, MessageCircle, Heart, User } from 'lucide-react';
 import { TESTIMONIALS } from '../data';
 
 export default function FeedbackSection() {
@@ -55,12 +55,9 @@ export default function FeedbackSection() {
 
               {/* Parent & Child info footer */}
               <div className="flex items-center gap-3 pt-6 mt-6 border-t-2 border-brand-border">
-                <img
-                  src={t.avatar}
-                  alt={t.parentName}
-                  referrerPolicy="no-referrer"
-                  className="w-11 h-11 rounded-full object-cover border-2 border-brand-dark"
-                />
+                <div className="w-11 h-11 rounded-full border-2 border-brand-dark bg-brand-light flex items-center justify-center overflow-hidden shrink-0">
+                  <User className="w-6 h-6 text-brand-dark" />
+                </div>
                 <div>
                   <h4 className="text-xs font-black text-brand-dark">
                     {t.parentName}

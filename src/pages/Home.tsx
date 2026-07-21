@@ -4,7 +4,7 @@ import {
   Sparkles, Calendar, HelpCircle, Heart, ChevronRight, 
   MessageCircle, Star, ShieldCheck, Award, Info, ChevronLeft,
   Compass, Users, Smile, HeartHandshake, Quote, ArrowRight,
-  ShieldAlert, BookOpen
+  ShieldAlert, BookOpen, User
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ACTIVITIES, TESTIMONIALS, FAQS } from '../data';
@@ -335,11 +335,9 @@ export default function Home({ favorites, onFavoriteToggle }: HomeProps) {
 
                 {/* Parent Avatar & Info */}
                 <div className="flex items-center gap-3 pt-4 border-t border-brand-border">
-                  <img
-                    src={t.avatar}
-                    alt={t.parentName}
-                    className="w-10 h-10 rounded-full border border-brand-dark object-cover"
-                  />
+                  <div className="w-10 h-10 rounded-full border border-brand-dark bg-brand-light flex items-center justify-center overflow-hidden shrink-0">
+                    <User className="w-5 h-5 text-brand-dark" />
+                  </div>
                   <div>
                     <div className="text-xs font-black text-brand-dark">
                       {t.parentName} (寶貝：{t.childName}，{t.childAge})

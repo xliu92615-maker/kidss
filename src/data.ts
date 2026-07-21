@@ -1,6 +1,6 @@
 import { Activity, Testimonial, FAQItem } from './types';
 // @ts-expect-error - Vite handles png asset resolution dynamically
-import pawPatrolImage from './assets/images/regenerated_image_1784626339310.png';
+import pawPatrolImage from './assets/images/regenerated_image_1784630752590.png';
 // @ts-expect-error - Vite handles jpg asset resolution dynamically
 import bungeeImage from './assets/images/regenerated_image_1784546159951.jpg';
 // @ts-expect-error - Vite handles png asset resolution dynamically
@@ -518,8 +518,8 @@ export const TESTIMONIALS: Testimonial[] = [
     childName: '樂樂',
     childAge: '5 歲',
     avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&h=150&q=80',
-    activityTitle: '幸福超商小小店長體驗',
-    content: '以前樂樂去超商只會吵著買玩具，自從參加了小小店長，知道店員哥哥姐姐很辛苦。回家還會學著把自己的玩具排整齊，說「歡迎光臨、謝謝你」，真的是太棒的禮儀養成課了！收銀體驗時嗶嗶聲讓他興奮了好幾天！',
+    activityTitle: '救援小英雄波力 Poli 見面會',
+    content: '樂樂看到波力出場的時候開心到尖叫！主辦單位很用心，不僅有豐富的互動問答，合照環節也安排得很順暢，沒有等太久。而且還有附贈小禮物，讓孩子拿到波力胸章愛不釋手，回家後一直說自己也是救援小英雄，真的是非常棒的體驗活動！',
     rating: 5,
     date: '2026-05-12'
   },
@@ -540,8 +540,8 @@ export const TESTIMONIALS: Testimonial[] = [
     childName: '彤彤',
     childAge: '4 歲',
     avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80',
-    activityTitle: '小小藍帶西點烘焙師體驗營',
-    content: '彤彤平時手部力道掌控不好，沒想到在烘焙大師的溫柔引導下，竟然能自己搓揉出一個個漂亮的杯子蛋糕胚！擠花的時候雖然沾得滿臉都是，但她專注的表情真的好迷人。帶回家的成品全家人一起吃，彤彤自信心爆棚！極力推薦！',
+    activityTitle: '飛翔體操兒童防跌課程',
+    content: '彤彤平時比較膽小怕摔，經過教練耐心引導，她開始學會正確的護身倒法和翻滾技巧。看著她從一開始不敢跳，到後來能在軟墊上開心飛躍，真的覺得來上課是對的！不但增進了身體協調性，孩子也變得更有自信了，真心推薦給各位家長！',
     rating: 5,
     date: '2026-06-18'
   }
