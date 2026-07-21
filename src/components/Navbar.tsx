@@ -42,8 +42,8 @@ export default function Navbar({ onCategoryChange, currentCategory, favoriteCoun
           <div className="flex justify-between h-20 items-center">
             {/* Logo with dynamic circle */}
             <Link to="/" className="flex-shrink-0 flex items-center gap-2 cursor-pointer">
-              <div className="w-10 h-10 bg-brand-orange rounded-full flex items-center justify-center border-2 border-white shadow-sm">
-                <span className="text-white font-bold text-xl font-rounded">啟</span>
+              <div className="w-10 h-10 bg-brand-orange rounded-full flex items-center justify-center border-2 border-white shadow-sm overflow-hidden">
+                <img src="/favicon.png" alt="啟夢教育" className="w-full h-full object-cover" />
               </div>
               <span className="font-rounded font-extrabold text-2xl tracking-tight text-white">
                 啟夢教育

@@ -9,6 +9,12 @@ import { ArrowLeft, Search, RefreshCw, Star, ShieldCheck, Award, Sparkles, Heart
 import creativeArtImage from '../assets/images/regenerated_image_1784451946363.jpg';
 // @ts-ignore
 import directorImage from '../assets/images/regenerated_image_1784564676249.png';
+// @ts-ignore
+import newsImage1 from '../assets/images/regenerated_image_1784599868196.png';
+// @ts-ignore
+import newsImage2 from '../assets/images/regenerated_image_1784599869138.png';
+// @ts-ignore
+import newsImage3 from '../assets/images/regenerated_image_1784599870703.png';
 
 const studyGallery = [
   { src: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80', title: '美國常春藤名校學術營' },
@@ -658,94 +664,77 @@ export default function CategoryPage({ favorites, onFavoriteToggle }: CategoryPa
           </div>
         </div>
 
-        {/* Teachers Section */}
+        {/* News Column Section */}
         <div className="space-y-6 pt-4">
           <div className="text-center">
             <h2 className="text-xl sm:text-2xl font-black text-brand-dark font-rounded uppercase tracking-wider flex items-center justify-center gap-2">
-              <Users className="w-6 h-6 text-[#1145BA]" />
-              明星引導師團隊
+              📰 新聞專欄
             </h2>
             <p className="text-xs sm:text-sm text-brand-muted font-bold mt-1">
-              幼教及各專業領域頂尖師資，給孩子最專業的引領與最溫暖的陪伴
+              啟夢教育聯盟的最新動態與媒體報導
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Teacher 1 */}
-            <div className="bg-white rounded-2xl border-2 border-brand-dark p-6 shadow-[4px_4px_0px_0px_#2D3436] flex flex-col sm:flex-row gap-5 items-center sm:items-start text-center sm:text-left">
-              <div className="w-24 h-24 rounded-full bg-brand-yellow border-4 border-brand-dark flex items-center justify-center text-4xl shrink-0 shadow-sm font-rounded">
-                🎓
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {/* News 1 */}
+            <a href="#" className="group bg-white rounded-2xl border-2 border-brand-dark overflow-hidden shadow-[4px_4px_0px_0px_#2D3436] hover:-translate-y-1 transition-all flex flex-col block">
+              <div className="aspect-[16/10] relative border-b-2 border-brand-dark overflow-hidden bg-brand-bg">
+                <img 
+                  src={newsImage1} 
+                  alt="全國大小事新聞網報導"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
-              <div className="space-y-2">
-                <div>
-                  <span className="text-[10px] font-black bg-brand-orange text-white px-2.5 py-0.5 border-2 border-brand-dark rounded-full font-rounded">
-                    創辦人 / 總顧問
-                  </span>
-                  <h3 className="text-lg font-black text-brand-dark font-rounded mt-1">廖校長 (Principal Liao)</h3>
-                  <p className="text-xs text-brand-orange font-bold">兒童心理學碩士 / 資深兒童教育發展顧問</p>
+              <div className="p-5 flex flex-col flex-1 space-y-3">
+                <div className="flex items-center gap-2">
+                  <span className="text-[10px] font-black bg-brand-yellow text-brand-dark px-2 py-0.5 border border-brand-dark rounded-full">全國大小事新聞網</span>
+                  <span className="text-[10px] text-brand-muted font-bold">2025-10-23</span>
                 </div>
-                <p className="text-xs text-brand-muted font-bold leading-relaxed">
-                  廖校長擁有超過 15 年的幼兒與中小學教育研究經驗。她深信「體驗是最好的學校，興趣是最好的老師」，致力於將繁瑣的職業知識轉化為超萌、好懂的沉浸式互動遊戲。
-                </p>
+                <h3 className="text-sm font-black text-brand-dark font-rounded leading-snug group-hover:text-brand-orange transition-colors">
+                  啟夢教育聯盟 為孩子點亮未來燈 讓教育成為通往世界的橋
+                </h3>
               </div>
-            </div>
+            </a>
 
-            {/* Teacher 2 */}
-            <div className="bg-white rounded-2xl border-2 border-brand-dark p-6 shadow-[4px_4px_0px_0px_#2D3436] flex flex-col sm:flex-row gap-5 items-center sm:items-start text-center sm:text-left">
-              <div className="w-24 h-24 rounded-full bg-emerald-100 border-4 border-brand-dark flex items-center justify-center text-4xl shrink-0 shadow-sm font-rounded">
-                🦗
+            {/* News 2 */}
+            <a href="#" className="group bg-white rounded-2xl border-2 border-brand-dark overflow-hidden shadow-[4px_4px_0px_0px_#2D3436] hover:-translate-y-1 transition-all flex flex-col block">
+              <div className="aspect-[16/10] relative border-b-2 border-brand-dark overflow-hidden bg-brand-bg">
+                <img 
+                  src={newsImage2} 
+                  alt="台灣產經新聞報導"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
-              <div className="space-y-2">
-                <div>
-                  <span className="text-[10px] font-black bg-[#1145BA] text-white px-2.5 py-0.5 border-2 border-brand-dark rounded-full font-rounded">
-                    自然生態引導師
-                  </span>
-                  <h3 className="text-lg font-black text-brand-dark font-rounded mt-1">昆蟲哥哥 (Brother Insect)</h3>
-                  <p className="text-xs text-[#1145BA] font-bold">國立台灣大學昆蟲學系畢業 / 生態作家</p>
+              <div className="p-5 flex flex-col flex-1 space-y-3">
+                <div className="flex items-center gap-2">
+                  <span className="text-[10px] font-black bg-brand-orange text-white px-2 py-0.5 border border-brand-dark rounded-full">台灣產經新聞</span>
+                  <span className="text-[10px] text-brand-muted font-bold">2025-12-01</span>
                 </div>
-                <p className="text-xs text-brand-muted font-bold leading-relaxed">
-                  昆蟲哥哥是全台人氣爆棚的野外探索明星！他擅長以超級生動、充滿故事與趣味的情境引導，帶領孩子在絕對安全的環境中親近大自然、尋訪甲蟲，啟發自然科普興趣。
-                </p>
+                <h3 className="text-sm font-black text-brand-dark font-rounded leading-snug group-hover:text-brand-orange transition-colors">
+                  「啟夢教育聯盟」 - 以教育為橋，以大愛為根，讓夢想成為行動
+                </h3>
               </div>
-            </div>
+            </a>
 
-            {/* Teacher 3 */}
-            <div className="bg-white rounded-2xl border-2 border-brand-dark p-6 shadow-[4px_4px_0px_0px_#2D3436] flex flex-col sm:flex-row gap-5 items-center sm:items-start text-center sm:text-left">
-              <div className="w-24 h-24 rounded-full bg-rose-100 border-4 border-brand-dark flex items-center justify-center text-4xl shrink-0 shadow-sm font-rounded">
-                🍰
+            {/* News 3 */}
+            <a href="#" className="group bg-white rounded-2xl border-2 border-brand-dark overflow-hidden shadow-[4px_4px_0px_0px_#2D3436] hover:-translate-y-1 transition-all flex flex-col block">
+              <div className="aspect-[16/10] relative border-b-2 border-brand-dark overflow-hidden bg-brand-bg">
+                <img 
+                  src={newsImage3} 
+                  alt="PChome 新聞報導"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
-              <div className="space-y-2">
-                <div>
-                  <span className="text-[10px] font-black bg-brand-yellow text-brand-dark px-2.5 py-0.5 border-2 border-brand-dark rounded-full font-rounded">
-                    主廚與食育引導師
-                  </span>
-                  <h3 className="text-lg font-black text-brand-dark font-rounded mt-1">甜點姐姐 (Sister Pastry)</h3>
-                  <p className="text-xs text-brand-orange font-bold">前五星級酒店主廚 / 專職兒童食育美學講師</p>
+              <div className="p-5 flex flex-col flex-1 space-y-3">
+                <div className="flex items-center gap-2">
+                  <span className="text-[10px] font-black bg-[#1145BA] text-white px-2 py-0.5 border border-brand-dark rounded-full">PChome 新聞</span>
+                  <span className="text-[10px] text-brand-muted font-bold">2025-10-23</span>
                 </div>
-                <p className="text-xs text-brand-muted font-bold leading-relaxed">
-                  甜點姐姐專注於推廣安全的無明火兒童烘焙與五感食育。她把重量、容量等數學與化學概念融入搓麵團與蛋糕擠花中，培養手部精細動作，也讓孩子在創作中學會珍惜食物。
-                </p>
+                <h3 className="text-sm font-black text-brand-dark font-rounded leading-snug group-hover:text-brand-orange transition-colors">
+                  啟夢教育聯盟 為孩子點亮未來燈 讓教育成為通往世界的橋
+                </h3>
               </div>
-            </div>
-
-            {/* Teacher 4 */}
-            <div className="bg-white rounded-2xl border-2 border-brand-dark p-6 shadow-[4px_4px_0px_0px_#2D3436] flex flex-col sm:flex-row gap-5 items-center sm:items-start text-center sm:text-left">
-              <div className="w-24 h-24 rounded-full bg-blue-100 border-4 border-brand-dark flex items-center justify-center text-4xl shrink-0 shadow-sm font-rounded">
-                👨‍🚒
-              </div>
-              <div className="space-y-2">
-                <div>
-                  <span className="text-[10px] font-black bg-brand-dark text-white px-2.5 py-0.5 border-2 border-brand-dark rounded-full font-rounded">
-                    安全總監 / 教官
-                  </span>
-                  <h3 className="text-lg font-black text-brand-dark font-rounded mt-1">陳教官 (Instructor Chen)</h3>
-                  <p className="text-xs text-brand-dark font-bold">退役消防隊長 / 特種急救與野外求生教練</p>
-                </div>
-                <p className="text-xs text-brand-muted font-bold leading-relaxed">
-                  陳教官擁有紅十字會急救員、水上救生等多重專業證照。他負責全程督導啟夢教育旗下所有活動場地的安全勘查與安全防護，提供高達1:5至1:8的安全比例，萬無一失。
-                </p>
-              </div>
-            </div>
+            </a>
           </div>
         </div>
 
