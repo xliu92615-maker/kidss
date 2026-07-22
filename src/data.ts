@@ -1,6 +1,6 @@
 import { Activity, Testimonial, FAQItem } from './types';
 // @ts-expect-error - Vite handles png asset resolution dynamically
-import pawPatrolImage from './assets/images/regenerated_image_1784630752590.png';
+import pawPatrolImage from './assets/images/regenerated_image_1784639990711.png';
 // @ts-expect-error - Vite handles jpg asset resolution dynamically
 import bungeeImage from './assets/images/regenerated_image_1784546159951.jpg';
 // @ts-expect-error - Vite handles png asset resolution dynamically
